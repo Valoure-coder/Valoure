@@ -55,5 +55,19 @@ Legend: `READ` = read-only API call · `WRITE` = mutation · `FILE` = local file
   for the matching variant when built into the theme.
 
 ### Blockers (still open)
-- Shopify MCP reconnecting (token) — store writes paused until it's back.
 - Task 4 parked: no sales data yet.
+
+---
+
+## Session 2 — 2026-07-05 — Execution
+
+| # | Type | Action | Result |
+|---|------|--------|--------|
+| 20 | NOTE | Owner decisions | Copy stays 100% as-is; images = use own photo (no AI-gen available); listicle → product page on draft theme |
+| 21 | WRITE | `update-product` (Weighted Sleep Mask) | Added CDN photo, description (owner voice), SKUs WSM-1PK/2PK/3PK |
+| 22 | WRITE | `graphql_mutation productUpdate` | Set productType "Sleep Accessories", vendor "Valoure Sleep", 7 tags, SEO title+meta |
+| 23 | READ | `get-product` verify | ✅ Featured image processed (MediaImage/73207509188957); all fields confirmed |
+| 24 | NOTE | Task 1 COMPLETE | Product launch-ready; inventory untracked (sellable at 0) |
+
+### Task 1 — DONE ✓
+### Next: Task 3 (listicle as product page on a DRAFT theme copy — never touch live theme)
