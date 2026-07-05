@@ -86,3 +86,34 @@ Legend: `READ` = read-only API call · `WRITE` = mutation · `FILE` = local file
 - Preview URL: `https://0t3ptn-ca.myshopify.com/products/weighted-sleep-mask?preview_theme_id=205728153949`
 - ⛔ Draft theme will NOT be published without explicit owner approval (review gate).
 - Note: copy left 100% as-is per owner (risky claims retained by owner's choice).
+
+## Session 3 — 2026-07-05 — PDP refresh on richer brief + image reality
+
+| # | Type | Action | Result |
+|---|------|--------|--------|
+| 31 | READ | `get-product` (Weighted Sleep Mask) | ✅ Confirmed fully set up: ACTIVE, image, description, 3 bundle variants + SKUs, tags |
+| 32 | READ | `graphql_query` themes + draft template | ✅ Draft theme 205728153949 present; `templates/product.liquid` (listicle PDP) installed |
+| 33 | FILE | Edited `draft-theme/templates/product.liquid` | Fixed 2 on-brand issues: removed unsubstantiated "age slower / more attractive" claim; fixed "You're mind" typo |
+| 34 | WRITE | `graphql_mutation themeFilesUpsert` (draft 205728153949) | ✅ Re-inserted corrected PDP — no userErrors. Live theme only ever read |
+| 35 | FILE | Synced `listicle-preview.html` | Local viewable copy matches the two copy fixes |
+
+### Copy fixes rationale (aligns page with new brand brief)
+- **Removed:** "You'll age slower, you get more attractive, finally you got your confidence back."
+  → unsubstantiated health/appearance claims that contradict the brand promise ("immediate
+  comfort, not optimization") and pose an ad-compliance risk. **Replaced with:** "Tonight, you
+  finally rest. Tomorrow, you wake up feeling like yourself again."
+- **Fixed typo:** "You're mind is finally silent" → "Your mind finally goes quiet — and you drift
+  off without trying." (typos undercut a brand whose persona wants to feel *looked after*.)
+
+### Honest limitations flagged to owner
+- **No image-generation tool** is available in this environment — I cannot generate authentic
+  product photos of the actual pink mask. Delivered a course-style shot list instead + offered to
+  upload/arrange real photos into the product gallery + PDP once owner provides them.
+- **Bonus fulfilment gap:** the "free silk pillowcase" + "free shipping" tiers are *stated* on the
+  page but NOT yet wired in Shopify (no pillowcase SKU, no automatic gift/free-ship rule). Flagged
+  as the key remaining setup item before going live. Needs a plan before building.
+
+### Go-live (review gate — owner action required)
+- Theme publishing is intentionally blocked via MCP (safety) AND withheld pending owner approval.
+- Owner publishes from Shopify admin: Online Store → Themes → "Valoure LISTICLE DRAFT (safe copy)"
+  → Actions → Publish. Preview first via the preview URL above.
