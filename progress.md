@@ -42,7 +42,18 @@ Legend: `READ` = read-only API call · `WRITE` = mutation · `FILE` = local file
 | 15 | READ | `run-analytics-query` (top products, 90d) | 0 rows — **no sales yet** (brand-new store). Task 4 parked until orders exist |
 | 16 | FILE | Created `product-copy.md` | Draft title/description/SEO/bundle copy for owner review |
 
+| 17 | FILE | Created `prelander.html` | Owner's full listicle PDP HTML saved (scoped `#valoure-pdp`) |
+| 18 | FILE | Created `inspiration-pdps.md` | Owner's 17 inspiration URLs + note on nodpod-branded photos |
+| 19 | NOTE | Reviewed assets | Prelander already contains real product image on Shopify CDN + full bundle pricing that matches variants |
+
+### Observations to resolve with owner
+- **nodpod-branded photos:** the 2 pink mask lifestyle images sent show competitor
+  branding — recommend NOT using as product images. Real product photo already on CDN.
+- **Copy/compliance:** pre-lander has a few risky claims ("age slower, get more
+  attractive") + minor typos ("You're mind") — recommend cleanup before publish.
+- **Pricing CTAs** ("Shop 1/2/3") are non-functional spans — must link to add-to-cart
+  for the matching variant when built into the theme.
+
 ### Blockers (still open)
-- Need **product image** (URL or file in `/home/user/Valoure/`) to add to the product.
-- Need **pre-lander HTML** (paste or file) to build the listicle page (Task 3).
+- Shopify MCP reconnecting (token) — store writes paused until it's back.
 - Task 4 parked: no sales data yet.
