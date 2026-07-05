@@ -1,0 +1,547 @@
+<title>Valoure — 5-Day Launch Gameplan</title>
+<style>
+  :root{
+    --night:#0d1230; --night-2:#131a3f; --card:#171f4a; --card-2:#1c2557;
+    --line:#2a3268; --ink:#eceafa; --ink-soft:#b9bce0; --ink-mute:#7f84b3;
+    --moon:#b7a6f4; --moon-deep:#8f79e8; --amber:#e9c987; --mint:#8fe0c0;
+    --rose:#f0a5b8;
+    --ff-display:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+    --ff-body:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --ff-mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+    --shadow:0 18px 50px -22px rgba(0,0,0,.7);
+    --maxw:1040px;
+  }
+  @media (prefers-color-scheme: light){
+    :root{
+      --night:#f3f1fb; --night-2:#eae7f8; --card:#ffffff; --card-2:#f7f5ff;
+      --line:#e0dcf3; --ink:#1c1f3d; --ink-soft:#4a4e78; --ink-mute:#8a8eb8;
+      --moon:#6b53d6; --moon-deep:#5941c4; --amber:#b57e1e; --mint:#1f9d78;
+      --rose:#c9506c; --shadow:0 18px 44px -26px rgba(60,50,120,.4);
+    }
+  }
+  :root[data-theme="dark"]{
+    --night:#0d1230; --night-2:#131a3f; --card:#171f4a; --card-2:#1c2557;
+    --line:#2a3268; --ink:#eceafa; --ink-soft:#b9bce0; --ink-mute:#7f84b3;
+    --moon:#b7a6f4; --moon-deep:#8f79e8; --amber:#e9c987; --mint:#8fe0c0;
+    --rose:#f0a5b8; --shadow:0 18px 50px -22px rgba(0,0,0,.7);
+  }
+  :root[data-theme="light"]{
+    --night:#f3f1fb; --night-2:#eae7f8; --card:#ffffff; --card-2:#f7f5ff;
+    --line:#e0dcf3; --ink:#1c1f3d; --ink-soft:#4a4e78; --ink-mute:#8a8eb8;
+    --moon:#6b53d6; --moon-deep:#5941c4; --amber:#b57e1e; --mint:#1f9d78;
+    --rose:#c9506c; --shadow:0 18px 44px -26px rgba(60,50,120,.4);
+  }
+
+  *{box-sizing:border-box}
+  body{margin:0}
+  .wrap{
+    background:var(--night);
+    color:var(--ink);
+    font-family:var(--ff-body);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+    padding:0 20px 90px;
+  }
+  .inner{max-width:var(--maxw);margin:0 auto}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    padding:64px 0 40px;
+    border-bottom:1px solid var(--line);
+    overflow:hidden;
+  }
+  .stars{position:absolute;inset:0;pointer-events:none;opacity:.9}
+  .eyebrow{
+    font-family:var(--ff-mono);
+    font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--moon);margin:0 0 18px;
+  }
+  h1{
+    font-family:var(--ff-display);
+    font-weight:600;
+    font-size:clamp(2.4rem,6vw,4.1rem);
+    line-height:1.02;
+    letter-spacing:-.01em;
+    margin:0 0 18px;
+    text-wrap:balance;
+  }
+  h1 em{font-style:italic;color:var(--moon)}
+  .lede{
+    font-size:clamp(1.02rem,1.7vw,1.2rem);
+    color:var(--ink-soft);
+    max-width:60ch;margin:0 0 34px;
+  }
+  .countdown{
+    display:flex;flex-wrap:wrap;gap:10px;align-items:stretch;
+  }
+  .cd{
+    flex:1 1 88px;min-width:82px;
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:14px 12px;text-align:center;
+    position:relative;
+  }
+  .cd .n{font-family:var(--ff-display);font-size:1.5rem;line-height:1;color:var(--ink)}
+  .cd .d{font-size:.72rem;color:var(--ink-mute);margin-top:6px;letter-spacing:.02em}
+  .cd .dow{font-family:var(--ff-mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--moon);margin-bottom:8px}
+  .cd.is-launch{
+    background:linear-gradient(160deg,var(--moon-deep),var(--moon));
+    border-color:transparent;
+  }
+  .cd.is-launch .n,.cd.is-launch .d{color:#0d1230}
+  :root[data-theme="light"] .cd.is-launch .n,
+  :root[data-theme="light"] .cd.is-launch .d{color:#fff}
+  @media (prefers-color-scheme: light){
+    .cd.is-launch .n,.cd.is-launch .d{color:#fff}
+  }
+  .cd.is-launch .dow{color:rgba(13,18,48,.75)}
+  :root[data-theme="light"] .cd.is-launch .dow{color:rgba(255,255,255,.85)}
+  @media (prefers-color-scheme: light){.cd.is-launch .dow{color:rgba(255,255,255,.85)}}
+
+  /* ---------- Sections ---------- */
+  section{padding-top:56px}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:8px}
+  .sec-num{font-family:var(--ff-mono);font-size:.8rem;color:var(--moon);letter-spacing:.1em}
+  h2{
+    font-family:var(--ff-display);font-weight:600;
+    font-size:clamp(1.5rem,3vw,2.1rem);margin:0;letter-spacing:-.01em;
+  }
+  .sec-sub{color:var(--ink-soft);max-width:66ch;margin:6px 0 30px}
+
+  /* ---------- Day cards / timeline ---------- */
+  .days{display:flex;flex-direction:column;gap:16px}
+  .day{
+    background:var(--card);border:1px solid var(--line);border-radius:18px;
+    box-shadow:var(--shadow);
+    overflow:hidden;
+  }
+  .day-top{
+    display:flex;flex-wrap:wrap;align-items:center;gap:14px;
+    padding:18px 22px;border-bottom:1px solid var(--line);
+    background:var(--card-2);
+  }
+  .badge{
+    font-family:var(--ff-mono);font-size:.7rem;letter-spacing:.12em;
+    background:var(--night-2);color:var(--moon);
+    border:1px solid var(--line);border-radius:999px;padding:5px 11px;text-transform:uppercase;
+  }
+  .day-date{font-family:var(--ff-mono);font-size:.78rem;color:var(--ink-mute)}
+  .day-title{font-family:var(--ff-display);font-size:1.22rem;margin:0;flex:1 1 auto;min-width:160px}
+  .tracks{display:grid;grid-template-columns:1fr 1fr;gap:0}
+  @media(max-width:640px){.tracks{grid-template-columns:1fr}}
+  .track{padding:20px 22px}
+  .track+.track{border-left:1px solid var(--line)}
+  @media(max-width:640px){.track+.track{border-left:0;border-top:1px solid var(--line)}}
+  .track h4{
+    display:flex;align-items:center;gap:8px;
+    font-family:var(--ff-mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;
+    margin:0 0 14px;color:var(--ink-mute);
+  }
+  .dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+  .dot.store{background:var(--moon)}
+  .dot.ads{background:var(--amber)}
+  ul.chk{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px}
+  ul.chk li{position:relative;padding-left:28px;color:var(--ink-soft);font-size:.94rem}
+  ul.chk li::before{
+    content:"";position:absolute;left:0;top:3px;
+    width:16px;height:16px;border-radius:5px;
+    border:1.5px solid var(--line);background:var(--night-2);
+  }
+  ul.chk li b{color:var(--ink);font-weight:600}
+  ul.chk li .tag{
+    display:inline-block;font-family:var(--ff-mono);font-size:.62rem;letter-spacing:.06em;
+    padding:1px 6px;border-radius:5px;margin-left:6px;vertical-align:1px;
+    background:var(--night-2);border:1px solid var(--line);color:var(--ink-mute);
+  }
+  .tag.gate{color:var(--rose);border-color:color-mix(in srgb,var(--rose) 40%,var(--line))}
+
+  /* ---------- Ad concept cards ---------- */
+  .ads-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  @media(max-width:720px){.ads-grid{grid-template-columns:1fr}}
+  .ad{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:20px 20px 22px;display:flex;flex-direction:column;gap:12px;
+  }
+  .ad-k{display:flex;align-items:center;gap:10px}
+  .ad-num{
+    font-family:var(--ff-display);font-size:1.4rem;color:var(--moon);
+    width:34px;height:34px;flex:none;display:grid;place-items:center;
+    border:1px solid var(--line);border-radius:9px;background:var(--night-2);
+  }
+  .ad-angle{font-family:var(--ff-mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--amber)}
+  .ad h3{font-family:var(--ff-display);font-size:1.12rem;margin:0}
+  .ad .hook{
+    font-size:1.02rem;color:var(--ink);font-style:italic;
+    border-left:2px solid var(--moon);padding-left:12px;margin:2px 0;
+  }
+  .ad .meta{font-size:.86rem;color:var(--ink-soft)}
+  .ad .meta b{color:var(--ink)}
+
+  /* ---------- callout ---------- */
+  .callout{
+    background:linear-gradient(150deg,var(--card),var(--card-2));
+    border:1px solid var(--line);border-left:3px solid var(--amber);
+    border-radius:14px;padding:20px 22px;margin-top:22px;
+  }
+  .callout h4{margin:0 0 8px;font-family:var(--ff-display);font-size:1.05rem;color:var(--amber)}
+  .callout p{margin:0;color:var(--ink-soft);font-size:.94rem}
+  .callout p+p{margin-top:8px}
+
+  /* ---------- launch checklist ---------- */
+  .launch{
+    background:linear-gradient(160deg,var(--card-2),var(--card));
+    border:1px solid var(--line);border-radius:18px;padding:26px 24px;
+    box-shadow:var(--shadow);
+  }
+  .launch .grid{display:grid;grid-template-columns:1fr 1fr;gap:22px 34px;margin-top:6px}
+  @media(max-width:640px){.launch .grid{grid-template-columns:1fr}}
+
+  /* ---------- pill row / legend ---------- */
+  .legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:26px;font-size:.82rem;color:var(--ink-mute)}
+  .legend span{display:inline-flex;align-items:center;gap:7px}
+
+  footer{margin-top:60px;padding-top:24px;border-top:1px solid var(--line);color:var(--ink-mute);font-size:.84rem}
+  a{color:var(--moon)}
+</style>
+
+<div class="wrap">
+<div class="inner">
+
+  <header class="hero">
+    <canvas class="stars" id="stars" aria-hidden="true"></canvas>
+    <p class="eyebrow">Valoure · Sleep &amp; Calm · Store Launch</p>
+    <h1>Five nights to <em>launch.</em></h1>
+    <p class="lede">Your offer and persona are locked. What's left is a launch-ready storefront and a first batch of scroll-stopping static ads. Here's the day-by-day plan from today to going live on <b>Thursday, 10 July</b>.</p>
+    <div class="countdown" role="list" aria-label="Launch countdown">
+      <div class="cd" role="listitem"><div class="dow">Sat</div><div class="n">5</div><div class="d">D-5 · Foundation</div></div>
+      <div class="cd" role="listitem"><div class="dow">Sun</div><div class="n">6</div><div class="d">D-4 · Build</div></div>
+      <div class="cd" role="listitem"><div class="dow">Mon</div><div class="n">7</div><div class="d">D-3 · Creative</div></div>
+      <div class="cd" role="listitem"><div class="dow">Tue</div><div class="n">8</div><div class="d">D-2 · Trust</div></div>
+      <div class="cd" role="listitem"><div class="dow">Wed</div><div class="n">9</div><div class="d">D-1 · Dry run</div></div>
+      <div class="cd is-launch" role="listitem"><div class="dow">Thu</div><div class="n">10</div><div class="d">Launch</div></div>
+    </div>
+    <div class="legend">
+      <span><i class="dot store"></i> Store build track</span>
+      <span><i class="dot ads"></i> Ads &amp; marketing track</span>
+      <span><i class="tag gate" style="font-family:var(--ff-mono)">GATE</i> Needs your approval before it goes live</span>
+    </div>
+  </header>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">00</span><h2>Where you actually stand</h2></div>
+    <p class="sec-sub">Good news first: you don't need to <em>create</em> a store from zero. It already exists — the work is finishing it. Two things below are genuine blockers to your offer, so we tackle them early, not on launch morning.</p>
+    <div class="callout">
+      <h4>The store exists — it just isn't dressed yet</h4>
+      <p>Your Shopify store <b>Mijn winkel</b> (<span style="font-family:var(--ff-mono);font-size:.85em">0t3ptn-ca.myshopify.com</span>) is on the Basic plan, EUR, with the <b>Weighted Sleep Mask</b> product already live and its 1 / 2 / 3-pack bundle prices (€33.95 / €61.11 / €81.48) already set. What's missing: description, images, reviews, trust pages, and the storefront design. That's the build.</p>
+    </div>
+    <div class="callout" style="border-left-color:var(--rose)">
+      <h4 style="color:var(--rose)">Two blockers to solve first — not on launch day</h4>
+      <p><b>1. The free silk pillowcase gift.</b> Your 2- and 3-pack offer promises 1–2 free silk pillowcases, but that gift product doesn't exist yet and Shopify Basic has no native "buy 2, get a free gift." We need a bundle/gift app (or an automatic-discount + free-gift Function) decided on Day 1 so it's tested before launch.</p>
+      <p><b>2. Free shipping on 2+.</b> Same offer, same fix — set up as a shipping rate or bundled into the gift app. Both are wired and test-ordered on D-1, never assumed.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">01</span><h2>The 5-day build</h2></div>
+    <p class="sec-sub">Two tracks run in parallel each day: the <b style="color:var(--moon)">store</b> gets built while the <b style="color:var(--amber)">ads</b> get produced. Everything store-side happens on a <b>draft theme</b> — the live storefront is never touched until launch morning.</p>
+
+    <div class="days">
+
+      <!-- DAY 1 -->
+      <article class="day">
+        <div class="day-top">
+          <span class="badge">D-5</span>
+          <span class="day-date">Sat · 5 Jul</span>
+          <h3 class="day-title">Foundation &amp; accounts</h3>
+        </div>
+        <div class="tracks">
+          <div class="track">
+            <h4><i class="dot store"></i> Store</h4>
+            <ul class="chk">
+              <li><b>Duplicate the live theme</b> to a safe draft copy — all build work happens there.</li>
+              <li><b>Approve &amp; push product copy</b> (title, benefit description, bundle messaging) to the mask. <span class="tag gate">GATE</span></li>
+              <li><b>Decide the gift/bundle mechanic</b> — pick a free-gift app or Shopify Function for the pillowcase + free shipping.</li>
+              <li><b>Create the silk pillowcase</b> as a €0 / hidden gift product.</li>
+            </ul>
+          </div>
+          <div class="track">
+            <h4><i class="dot ads"></i> Ads</h4>
+            <ul class="chk">
+              <li><b>Stand up Meta Business Suite</b> — Business account, ad account, page, payment method.</li>
+              <li><b>Install the Meta Pixel + Conversions API</b> on the store (via Shopify's Facebook &amp; Instagram channel).</li>
+              <li><b>Lock 3 core ad angles</b> from your persona: racing mind, the offer, social proof.</li>
+              <li><b>Gather raw assets</b> — clean product shots + any lifestyle/testimonial material into one folder.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- DAY 2 -->
+      <article class="day">
+        <div class="day-top">
+          <span class="badge">D-4</span>
+          <span class="day-date">Sun · 6 Jul</span>
+          <h3 class="day-title">Product page &amp; listicle</h3>
+        </div>
+        <div class="tracks">
+          <div class="track">
+            <h4><i class="dot store"></i> Store</h4>
+            <ul class="chk">
+              <li><b>Build the hero product page</b> — image gallery, benefit copy, sticky bundle selector with the 3 tiers.</li>
+              <li><b>Publish the listicle page</b> — your pre-lander/listicle HTML as the high-converting entry point.</li>
+              <li><b>Add a reviews app</b> (Judge.me / Loox free tier) and seed with honest starter reviews.</li>
+              <li><b>Wire the bundle upsell</b> so picking 2- or 3-pack shows the free gift + shipping.</li>
+            </ul>
+          </div>
+          <div class="track">
+            <h4><i class="dot ads"></i> Ads</h4>
+            <ul class="chk">
+              <li><b>Set up Canva</b> (free) with a Valoure brand kit — night-indigo palette, one display font, logo.</li>
+              <li><b>Build the ad template</b> in 3 sizes: 1080×1350 (feed), 1080×1920 (story/reels), 1080×1080.</li>
+              <li><b>Draft primary text + headlines</b> for the 3 angles (copy comes before design).</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- DAY 3 -->
+      <article class="day">
+        <div class="day-top">
+          <span class="badge">D-3</span>
+          <span class="day-date">Mon · 7 Jul</span>
+          <h3 class="day-title">Static ad production</h3>
+        </div>
+        <div class="tracks">
+          <div class="track">
+            <h4><i class="dot ads"></i> Ads (main focus today)</h4>
+            <ul class="chk">
+              <li><b>Produce the 5 static concepts</b> below — each in feed + story size = ~10 files.</li>
+              <li><b>Keep text under ~20%</b> of the image and inside safe zones for Reels/Stories.</li>
+              <li><b>Make 1–2 variations</b> of your strongest angle (different image or headline) for testing.</li>
+              <li><b>Export at high quality</b>, named by angle + size so ad sets stay organized.</li>
+            </ul>
+          </div>
+          <div class="track">
+            <h4><i class="dot store"></i> Store</h4>
+            <ul class="chk">
+              <li><b>Build the homepage</b> — hero, benefit strip, bundle, reviews, guarantee, footer.</li>
+              <li><b>Set the store logo, colors &amp; favicon</b> to match the ads (one consistent look).</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- DAY 4 -->
+      <article class="day">
+        <div class="day-top">
+          <span class="badge">D-2</span>
+          <span class="day-date">Tue · 8 Jul</span>
+          <h3 class="day-title">Trust, legal &amp; SEO</h3>
+        </div>
+        <div class="tracks">
+          <div class="track">
+            <h4><i class="dot store"></i> Store</h4>
+            <ul class="chk">
+              <li><b>Add the policy pages</b> — Shipping, Returns/Refunds, Privacy, Terms (Shopify has generators).</li>
+              <li><b>Add Contact, FAQ &amp; About</b> — use your support email <span style="font-family:var(--ff-mono);font-size:.82em">shopvaloure…@gmail.com</span>.</li>
+              <li><b>Configure shipping zones &amp; rates</b> incl. the free-shipping tier for 2+.</li>
+              <li><b>Set SEO titles + meta descriptions</b> on product, listicle &amp; homepage.</li>
+            </ul>
+          </div>
+          <div class="track">
+            <h4><i class="dot ads"></i> Ads</h4>
+            <ul class="chk">
+              <li><b>Build the campaign in Ads Manager</b> (draft, not published) — 1 sales campaign, 1–2 ad sets.</li>
+              <li><b>Upload creatives &amp; write the ad-level copy</b> per angle; set the destination URL to the listicle.</li>
+              <li><b>Set budget &amp; schedule</b> to begin 10 Jul — leave everything paused.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- DAY 5 -->
+      <article class="day">
+        <div class="day-top">
+          <span class="badge">D-1</span>
+          <span class="day-date">Wed · 9 Jul</span>
+          <h3 class="day-title">Dry run &amp; QA</h3>
+        </div>
+        <div class="tracks">
+          <div class="track">
+            <h4><i class="dot store"></i> Store</h4>
+            <ul class="chk">
+              <li><b>Place a full test order</b> end-to-end — confirm the bundle discount + free gift + free shipping apply.</li>
+              <li><b>QA on mobile</b> (most traffic) — page speed, images, bundle selector, checkout.</li>
+              <li><b>Confirm your domain</b> is connected and payments (Shopify Payments) are active.</li>
+              <li><b>Verify the pixel fires</b> with Meta Pixel Helper — ViewContent, AddToCart, Purchase.</li>
+            </ul>
+          </div>
+          <div class="track">
+            <h4><i class="dot ads"></i> Ads</h4>
+            <ul class="chk">
+              <li><b>Final creative review</b> — spelling, safe zones, correct offer, correct link.</li>
+              <li><b>Double-check tracking</b> — pixel + dataset connected to the ad account, events matching.</li>
+              <li><b>Confirm the schedule &amp; budget</b>, ready to un-pause tomorrow.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- LAUNCH -->
+      <article class="day" style="border-color:var(--moon-deep)">
+        <div class="day-top" style="background:linear-gradient(120deg,var(--moon-deep),var(--card-2))">
+          <span class="badge" style="background:rgba(13,18,48,.35);color:#fff;border-color:transparent">LAUNCH</span>
+          <span class="day-date" style="color:rgba(255,255,255,.85)">Thu · 10 Jul</span>
+          <h3 class="day-title" style="color:#fff">Go live 🌙</h3>
+        </div>
+        <div class="tracks">
+          <div class="track">
+            <h4><i class="dot store"></i> Store</h4>
+            <ul class="chk">
+              <li><b>Publish the draft theme</b> to live. <span class="tag gate">GATE</span></li>
+              <li><b>Confirm the product is public</b> and the bundle/gift discount is active.</li>
+              <li><b>Do one final live buy-through</b> on the real storefront.</li>
+            </ul>
+          </div>
+          <div class="track">
+            <h4><i class="dot ads"></i> Ads</h4>
+            <ul class="chk">
+              <li><b>Un-pause the campaign.</b> <span class="tag gate">GATE</span></li>
+              <li><b>Watch the first 3–6 hours</b> — that pixel events fire and traffic reaches the listicle.</li>
+              <li><b>Don't touch budgets on day one</b> — let it gather data before judging.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">02</span><h2>Your 5 static ad concepts</h2></div>
+    <p class="sec-sub">Built for the racing-mind persona and your bundle offer. Angles 1–3 are the workhorses; 4–5 add social proof and a native feel. Produce each in feed (1080×1350) and story (1080×1920) so it runs across placements.</p>
+
+    <div class="ads-grid">
+
+      <article class="ad">
+        <div class="ad-k"><span class="ad-num">1</span><span class="ad-angle">Problem · Agitate</span></div>
+        <h3>The 3 a.m. brain</h3>
+        <p class="hook">"Still awake? It's not you — your brain just won't switch off."</p>
+        <p class="meta"><b>Visual:</b> dark bedroom, the glow of a phone or a clock reading 3:00. Restless, relatable.<br><b>Job:</b> stop the scroll by naming the exact feeling before showing the product.</p>
+      </article>
+
+      <article class="ad">
+        <div class="ad-k"><span class="ad-num">2</span><span class="ad-angle">Mechanism · Analogy</span></div>
+        <h3>A weighted blanket for your eyes</h3>
+        <p class="hook">"The calming science of weighted blankets — now made for your eyes."</p>
+        <p class="meta"><b>Visual:</b> clean hero shot of the mask with a soft "gentle weight" cue.<br><b>Job:</b> explain <em>how</em> it works so the price feels justified.</p>
+      </article>
+
+      <article class="ad">
+        <div class="ad-k"><span class="ad-num">3</span><span class="ad-angle">Offer · Value</span></div>
+        <h3>Buy 2, sleep better together</h3>
+        <p class="hook">"Buy 2 → 10% off + free shipping + a free silk pillowcase. 🎁"</p>
+        <p class="meta"><b>Visual:</b> mask + pillowcase gift stacked; bold offer text; "Most popular" flag on the 3-pack.<br><b>Job:</b> convert offer-motivated buyers; great for retargeting.</p>
+      </article>
+
+      <article class="ad">
+        <div class="ad-k"><span class="ad-num">4</span><span class="ad-angle">Social proof</span></div>
+        <h3>The 5-star review card</h3>
+        <p class="hook">"I used to lie awake for hours. Now I'm out in minutes." ★★★★★</p>
+        <p class="meta"><b>Visual:</b> a real review styled over a calm lifestyle background.<br><b>Job:</b> borrow trust — the highest-converting angle once you have reviews.</p>
+      </article>
+
+      <article class="ad">
+        <div class="ad-k"><span class="ad-num">5</span><span class="ad-angle">Native · UGC-style</span></div>
+        <h3>The "found it on my feed" flat-lay</h3>
+        <p class="hook">"3 things that fixed my sleep — this one surprised me."</p>
+        <p class="meta"><b>Visual:</b> phone-shot flat-lay, imperfect and authentic, not studio-polished.<br><b>Job:</b> blend into the feed so it reads as a tip, not an ad.</p>
+      </article>
+
+      <article class="ad" style="border-style:dashed;justify-content:center">
+        <div class="ad-k"><span class="ad-num" style="color:var(--amber);border-color:color-mix(in srgb,var(--amber) 40%,var(--line))">+</span><span class="ad-angle">Testing note</span></div>
+        <p class="meta">Launch <b>3–5 of these in one ad set</b> and let Meta find the winner. Judge on cost-per-purchase after ~50–100 clicks each — don't kill an ad on day one. Keep the <b>listicle</b> as the landing page for all of them.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">03</span><h2>Launch-morning checklist</h2></div>
+    <p class="sec-sub">Print this. When every box is true, you flip the two switches: publish the theme, un-pause the ads.</p>
+    <div class="launch">
+      <div class="grid">
+        <div>
+          <h4 style="font-family:var(--ff-display);margin:0 0 12px;color:var(--moon)">Store is ready when…</h4>
+          <ul class="chk">
+            <li>Product page has images, copy &amp; reviews</li>
+            <li>All 3 bundle tiers + free gift + free shipping verified by a test order</li>
+            <li>Policy, Contact, FAQ &amp; About pages exist</li>
+            <li>Payments live &amp; domain connected</li>
+            <li>Passes mobile QA</li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="font-family:var(--ff-display);margin:0 0 12px;color:var(--amber)">Ads are ready when…</h4>
+          <ul class="chk">
+            <li>Pixel + Conversions API firing correctly</li>
+            <li>3–5 creatives uploaded, copy &amp; link checked</li>
+            <li>Campaign built, budget &amp; audience set</li>
+            <li>Everything pointing to the listicle</li>
+            <li>Scheduled/paused, ready to un-pause</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="callout" style="margin-top:22px">
+      <h4>What I can do for you</h4>
+      <p>I can take on most of the store track directly through your Shopify connection — push the product copy, build the product page &amp; listicle on the draft theme, set up the bundle/gift mechanic, write the policy &amp; SEO pages, and run the test order. The ad <em>images</em> you'll produce in Canva, but I can write every headline, primary text and angle for you. Tell me where to start — my suggestion is the two blockers (gift + free shipping) plus pushing the product copy today.</p>
+    </div>
+  </section>
+
+  <footer>
+    Valoure launch gameplan · today 5 Jul 2026 → live 10 Jul 2026 · all store work on a draft theme, nothing goes live without your sign-off.
+  </footer>
+
+</div>
+</div>
+
+<script>
+  (function(){
+    var c = document.getElementById('stars');
+    if(!c) return;
+    var ctx = c.getContext('2d'), stars = [], DPR = Math.min(2, window.devicePixelRatio||1);
+    function size(){
+      var r = c.parentElement.getBoundingClientRect();
+      c.width = r.width*DPR; c.height = r.height*DPR;
+      stars = [];
+      var n = Math.round(r.width*r.height/9000);
+      for(var i=0;i<n;i++){
+        stars.push({x:Math.random()*c.width, y:Math.random()*c.height, r:(Math.random()*1.2+0.2)*DPR, a:Math.random()*0.5+0.2, s:Math.random()*0.02+0.004});
+      }
+    }
+    function tint(){
+      var d = getComputedStyle(document.documentElement);
+      // moon color for stars
+      return d.getPropertyValue('--moon').trim() || '#b7a6f4';
+    }
+    var col = tint(), t=0, reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function draw(){
+      ctx.clearRect(0,0,c.width,c.height);
+      for(var i=0;i<stars.length;i++){
+        var st=stars[i];
+        var tw = reduce ? st.a : st.a*(0.6+0.4*Math.sin(t*st.s*60+i));
+        ctx.globalAlpha = Math.max(0,Math.min(1,tw));
+        ctx.fillStyle = col;
+        ctx.beginPath(); ctx.arc(st.x,st.y,st.r,0,6.2832); ctx.fill();
+      }
+      ctx.globalAlpha=1;
+    }
+    function loop(){ t+=0.016; draw(); if(!reduce) requestAnimationFrame(loop); }
+    size(); col=tint(); draw(); if(!reduce) loop();
+    window.addEventListener('resize', function(){ size(); col=tint(); draw(); });
+    // re-tint if theme toggled
+    new MutationObserver(function(){ col=tint(); draw(); }).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+  })();
+</script>

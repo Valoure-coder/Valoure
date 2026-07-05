@@ -86,3 +86,11 @@ Legend: `READ` = read-only API call · `WRITE` = mutation · `FILE` = local file
 - Preview URL: `https://0t3ptn-ca.myshopify.com/products/weighted-sleep-mask?preview_theme_id=205728153949`
 - ⛔ Draft theme will NOT be published without explicit owner approval (review gate).
 - Note: copy left 100% as-is per owner (risky claims retained by owner's choice).
+
+## Session 3 — 2026-07-05 — Launch gameplan
+
+| # | Type | Action | Result |
+|---|------|--------|--------|
+| 31 | NOTE | Owner request | Wants to go LIVE **10 Jul**; offer+persona ready; needs store built out + static ads |
+| 32 | FILE | Created `gameplan.html` | 5-day launch gameplan artifact — 2 tracks (store build / static ads), D-5→launch, 5 ad concepts, launch-day checklist |
+| 33 | NOTE | Open blockers surfaced in plan | (a) free silk pillowcase gift product + "buy 2 get gift" mechanic not built; (b) free-shipping-on-2+ not configured — both flagged for Day 1 |
