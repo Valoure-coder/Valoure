@@ -117,3 +117,18 @@ Legend: `READ` = read-only API call · `WRITE` = mutation · `FILE` = local file
 - Theme publishing is intentionally blocked via MCP (safety) AND withheld pending owner approval.
 - Owner publishes from Shopify admin: Online Store → Themes → "Valoure LISTICLE DRAFT (safe copy)"
   → Actions → Publish. Preview first via the preview URL above.
+
+### Go-live pre-flight (owner chose "prep to go live")
+
+| # | Type | Action | Result |
+|---|------|--------|--------|
+| 36 | READ | `graphql_query` product publication/SEO/variants | Pre-flight below |
+
+- ✅ **Product reachable:** ACTIVE + published to Online Store ("Webshop", "Shop", "Point of Sale"). `onlineStoreUrl` live.
+- ✅ **Template wiring:** `templateSuffix: null` → product uses our `templates/product.liquid` (the listicle PDP).
+- ✅ **Buy buttons:** all 3 variants `availableForSale: true`; PDP `/cart/add` links match variant IDs 1PK/2PK/3PK.
+- ✅ **SEO:** title + meta set ("…Silent Mind | Valoure Sleep").
+- ⚠️ **Inventory untracked** (sells at qty 0) — fine for launch, but no stock control; enable tracking once supplier stock is known.
+- ⛔ **LAUNCH BLOCKER (offer):** "free silk pillowcase" + "free shipping" on 2-/3-packs are still NOT wired
+  (no pillowcase SKU, no automatic gift/free-ship rule, store shipping not verified). Advertising these
+  before they exist = undelivered promise. Recommend resolving before paid traffic.
