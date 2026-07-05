@@ -51,10 +51,17 @@ Valoure Shopify store with Claude Code. Read this at the start of every session.
 - Shop name / domain: _TBD (pending get-shop-info)_
 - Plan: _TBD_
 - Currency: EUR (from stated pricing)
-- Product catalog: _TBD_
+- Product catalog: _TBD (store is brand-new / not yet live)_
 - Collections: _TBD_
 - Themes (live vs draft): _TBD_
 - Free-gift SKU (silk pillowcase): _TBD_
+
+### Hero product (Task 1)
+- **Name:** Weighted Sleep Mask (working title)
+- **Value prop:** Gentle weight quiets a racing mind so you fall asleep faster / calmer.
+- **Price:** €33.95
+- **Assets from owner:** a **pre-lander HTML** file + **1 product image** (to be shared).
+- **Status:** brand-new store, not yet live.
 
 ## 5. How we work (tooling notes)
 

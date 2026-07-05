@@ -21,8 +21,15 @@ Legend: `READ` = read-only API call · `WRITE` = mutation · `FILE` = local file
 ### Blockers
 - **Shopify re-authorization required** before any store read/write can proceed.
 
+| 6 | FILE | Committed `CLAUDE.md` + `progress.md` | Commit `9fe9847` |
+| 7 | NOTE | Owner provided product details | Hero = **Weighted Sleep Mask** (€33.95); has pre-lander HTML + 1 image; store brand-new/not live |
+| 8 | READ | `get-shop-info` (retry) | ❌ Still token-expired — re-auth not yet completed |
+
+### Blockers (still open)
+- **Shopify re-authorization required.** Retry confirmed the token is still expired.
+
 ### Next steps
-- Owner re-authorizes the Shopify MCP connection.
-- Run read-only discovery: `get-shop-info`, `search_products`, `search_collections`,
-  theme list → populate store schema in `CLAUDE.md`.
-- Confirm the new product's details before creating anything.
+- Owner completes Shopify re-authorization in claude.ai → Connectors.
+- Owner shares the **pre-lander HTML** (paste or file path) + **image URL**.
+- On reconnect: `get-shop-info`, `search_products`, `search_collections`, list themes →
+  populate store schema. Then draft Task 1 product (DRAFT status).
