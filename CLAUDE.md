@@ -48,13 +48,25 @@ Valoure Shopify store with Claude Code. Read this at the start of every session.
 > Updated as we learn the store's specific structure. (Populated once Shopify re-auth
 > completes and we can read live store data.)
 
-- Shop name / domain: _TBD (pending get-shop-info)_
-- Plan: _TBD_
-- Currency: EUR (from stated pricing)
-- Product catalog: _TBD (store is brand-new / not yet live)_
-- Collections: _TBD_
-- Themes (live vs draft): _TBD_
-- Free-gift SKU (silk pillowcase): _TBD_
+- Shop name / domain: **Mijn winkel** / `0t3ptn-ca.myshopify.com`
+- Plan: **Basic** · Currency: **EUR** · Country: **Netherlands** · TZ: **CEST**
+- Support email: shopvalouresupport@gmail.com
+- Product catalog: **NOT empty** — 1 product already exists (see below)
+- Collections: **Homepage** (`gid://shopify/Collection/710085673309`, handle `frontpage`), 1 product
+- Themes:
+  - `valoure-sleep-theme` → **MAIN / LIVE** (`gid://shopify/OnlineStoreTheme/205722747229`) — ⛔ never edit directly
+  - `Horizon` → UNPUBLISHED (`gid://shopify/OnlineStoreTheme/202776445277`)
+  - `sleep-elixer-aug-24-2025-1-0-3-latest` → UNPUBLISHED (`gid://shopify/OnlineStoreTheme/205724352861`)
+- Free-gift SKU (silk pillowcase): _does not exist yet — must be created_
+
+### Existing product (already in store — do NOT duplicate)
+- **Weighted Sleep Mask** — `gid://shopify/Product/16289182351709`, handle `weighted-sleep-mask`
+- Status: **ACTIVE** (⚠️ not draft — created 2026-07-02)
+- Missing: description, images, tags, SKUs, inventory (all empty / 0)
+- Variants (bundle pricing already baked in):
+  - 1-Pack → €33.95  (`.../ProductVariant/65158753288541`)
+  - 2-Pack → €61.11  (= 2×33.95 − 10%) (`.../ProductVariant/65158753321309`)
+  - 3-Pack → €81.48  (= 3×33.95 − 20%) (`.../ProductVariant/65158753354077`)
 
 ### Hero product (Task 1)
 - **Name:** Weighted Sleep Mask (working title)

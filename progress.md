@@ -25,11 +25,24 @@ Legend: `READ` = read-only API call · `WRITE` = mutation · `FILE` = local file
 | 7 | NOTE | Owner provided product details | Hero = **Weighted Sleep Mask** (€33.95); has pre-lander HTML + 1 image; store brand-new/not live |
 | 8 | READ | `get-shop-info` (retry) | ❌ Still token-expired — re-auth not yet completed |
 
-### Blockers (still open)
-- **Shopify re-authorization required.** Retry confirmed the token is still expired.
+| 9 | READ | `get-shop-info` | ✅ Connected — Mijn winkel / 0t3ptn-ca.myshopify.com, Basic, EUR, NL |
+| 10 | READ | `search_products` | ⚠️ Store NOT empty — "Weighted Sleep Mask" already ACTIVE, 3 variants |
+| 11 | READ | `search_collections` | 1 collection: Homepage (frontpage), 1 product |
+| 12 | READ | `graphql_query` themes | 3 themes: valoure-sleep-theme (MAIN/live), Horizon + sleep-elixer (unpublished) |
+| 13 | READ | `get-product` (Weighted Sleep Mask) | Confirmed: ACTIVE, no desc/images/SKU/inventory; variants 33.95 / 61.11 / 81.48 |
 
-### Next steps
-- Owner completes Shopify re-authorization in claude.ai → Connectors.
-- Owner shares the **pre-lander HTML** (paste or file path) + **image URL**.
-- On reconnect: `get-shop-info`, `search_products`, `search_collections`, list themes →
-  populate store schema. Then draft Task 1 product (DRAFT status).
+### Key discovery (contradicts "brand-new empty store")
+- Product **Weighted Sleep Mask** already exists and is **ACTIVE**, with 1/2/3-Pack
+  variants whose prices already encode the 10% / 20% bundle discounts.
+- A **live MAIN theme** `valoure-sleep-theme` exists (not Horizon). Owner mentioned
+  "Horizon" — needs clarification on which theme is the intended storefront.
+- No silk-pillowcase gift product exists yet; free-shipping tiers not yet configured.
+
+| 14 | NOTE | Owner decisions received | (a) Enhance existing product; (b) keep ACTIVE; (c) storefront = valoure-sleep-theme (build listicle on draft copy) |
+| 15 | READ | `run-analytics-query` (top products, 90d) | 0 rows — **no sales yet** (brand-new store). Task 4 parked until orders exist |
+| 16 | FILE | Created `product-copy.md` | Draft title/description/SEO/bundle copy for owner review |
+
+### Blockers (still open)
+- Need **product image** (URL or file in `/home/user/Valoure/`) to add to the product.
+- Need **pre-lander HTML** (paste or file) to build the listicle page (Task 3).
+- Task 4 parked: no sales data yet.
