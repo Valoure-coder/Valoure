@@ -70,4 +70,19 @@ Legend: `READ` = read-only API call · `WRITE` = mutation · `FILE` = local file
 | 24 | NOTE | Task 1 COMPLETE | Product launch-ready; inventory untracked (sellable at 0) |
 
 ### Task 1 — DONE ✓
-### Next: Task 3 (listicle as product page on a DRAFT theme copy — never touch live theme)
+
+## Session 2 (cont.) — Task 3 build
+
+| # | Type | Action | Result |
+|---|------|--------|--------|
+| 25 | READ | `search_docs_chunks` themeDuplicate | Confirmed themeDuplicate exists (2025-10); file writes allowed on unpublished only |
+| 26 | WRITE | `graphql_mutation themeDuplicate` | Created DRAFT copy of live theme → "Valoure LISTICLE DRAFT (safe copy)" `gid://…/205728153949` (UNPUBLISHED). Live theme only read. |
+| 27 | READ | theme files list (draft) | Custom OS2.0 funnel theme; **no product template existed** |
+| 28 | FILE | Created `draft-theme/templates/product.liquid` | Listicle with 3 buy buttons wired to /cart/add for variants 1/2/3-pack + ORDER NOW → #offer |
+| 29 | WRITE | `graphql_mutation themeFilesUpsert` | Wrote templates/product.liquid to DRAFT theme (205728153949) — success, no errors |
+| 30 | FILE | Created `listicle-preview.html` | Local viewable copy for owner review |
+
+### Task 3 — build done, PENDING owner review (not published)
+- Preview URL: `https://0t3ptn-ca.myshopify.com/products/weighted-sleep-mask?preview_theme_id=205728153949`
+- ⛔ Draft theme will NOT be published without explicit owner approval (review gate).
+- Note: copy left 100% as-is per owner (risky claims retained by owner's choice).
