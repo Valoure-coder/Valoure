@@ -86,3 +86,18 @@ Legend: `READ` = read-only API call · `WRITE` = mutation · `FILE` = local file
 - Preview URL: `https://0t3ptn-ca.myshopify.com/products/weighted-sleep-mask?preview_theme_id=205728153949`
 - ⛔ Draft theme will NOT be published without explicit owner approval (review gate).
 - Note: copy left 100% as-is per owner (risky claims retained by owner's choice).
+
+## Session 3 — 2026-07-07 — PDP build + offer change
+
+| # | Type | Action | Result |
+|---|------|--------|--------|
+| 31 | NOTE | Owner changed the offer | **No free gifts.** 2-pack = 15% off + free shipping; 3-pack = 30% off + free shipping. 2-pack = "Most Popular" (default), 3-pack = "Best Value" |
+| 32 | NOTE | Recalculated bundle prices | 2-pack €57.72 (67.90 −15%) · 3-pack €71.30 (101.85 −30%) |
+| 33 | FILE | Created `product-page.html` | Full standalone PDP, scoped `#valoure-pdp`, matches existing plum/lavender/peach design system. Interactive bundle selector + sticky ATC, buy buttons wired to real variant IDs |
+
+### ⚠️ OPEN — needs owner go-ahead before it can go live
+- **Live variant prices still encode the OLD offer** (10%/20%): 2-pack €61.11, 3-pack €81.48.
+  For checkout to match the new PDP, these must be updated to **€57.72** and **€71.30**.
+  Not touched yet (live-store change → review gate). Awaiting owner approval.
+- PDP is a **local file only** — nothing published to the store or theme.
+- Placeholder gallery thumbs + mech photo contain a PHOTO BRIEF for real shots to add.

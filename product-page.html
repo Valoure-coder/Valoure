@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valoure Weighted Sleep Mask — Quiet Your Mind, Fall Asleep Faster</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* =====================================================================
+   VALOURE SLEEP — PRODUCT DETAIL PAGE (PDP)
+   Scoped to #valoure-pdp so every rule is safe to paste into a Shopify
+   section without leaking into the rest of the theme.
+   Offer: 1=€33.95 · 2=15% off + free shipping · 3=30% off + free shipping
+   Variant IDs are real (see data-variant / data-id attributes).
+   ===================================================================== */
+#valoure-pdp{
+  --lavender:#b7ace0; --plum:#4d3f70; --plum-soft:#7768a3;
+  --peach:#f6c9a4; --peach-deep:#eaa876; --cloud:#fbf8fc;
+  --ink:#3a3450; --ink-soft:#786f95; --line:#eadcf0;
+  font-family:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+  color:var(--ink); background:var(--cloud); line-height:1.55;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+#valoure-pdp *{box-sizing:border-box;}
+#valoure-pdp img{max-width:100%; display:block;}
+#valoure-pdp a{text-decoration:none; color:inherit;}
+#valoure-pdp button{font-family:inherit; cursor:pointer; border:none;}
+#valoure-pdp .serif{font-family:'Instrument Serif',Georgia,serif; font-style:italic; font-weight:400;}
+#valoure-pdp .wrap{max-width:1080px; margin:0 auto; padding:0 22px;}
+#valoure-pdp .wrap-narrow{max-width:720px; margin:0 auto; padding:0 22px;}
+#valoure-pdp .eyebrow{font-size:12px; letter-spacing:0.18em; text-transform:uppercase; font-weight:700;}
+
+/* ---------- announcement bar ---------- */
+#valoure-pdp .announce{background:var(--plum); color:#fff; text-align:center; font-size:12.5px; letter-spacing:0.04em; padding:9px 16px; font-weight:500;}
+#valoure-pdp .announce b{font-weight:700; color:var(--peach);}
+
+/* ---------- header ---------- */
+#valoure-pdp .head{position:sticky; top:0; z-index:40; background:rgba(251,248,252,0.9); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
+#valoure-pdp .head .wrap{display:flex; align-items:center; justify-content:space-between; height:60px;}
+#valoure-pdp .logo-word{font-family:'Instrument Serif',Georgia,serif; font-style:italic; font-size:25px; color:var(--plum); line-height:1;}
+#valoure-pdp .logo-word span{font-family:'DM Sans',sans-serif; font-style:normal; font-weight:500; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:var(--plum-soft); display:block; margin-top:3px;}
+#valoure-pdp .head-cta{background:var(--plum); color:var(--cloud); font-weight:700; font-size:13px; padding:9px 20px; border-radius:999px;}
+#valoure-pdp .head-cta:hover{background:var(--plum-soft);}
+
+/* ---------- hero ---------- */
+#valoure-pdp .hero{padding:34px 0 20px;}
+#valoure-pdp .hero-grid{display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:start;}
+
+/* gallery */
+#valoure-pdp .gallery{position:sticky; top:78px;}
+#valoure-pdp .gallery-main{position:relative; border-radius:26px; overflow:hidden; background:linear-gradient(160deg,#efe6f4,#f7e9dd); box-shadow:0 30px 60px -30px rgba(77,63,112,0.5); aspect-ratio:1/1;}
+#valoure-pdp .gallery-main img{width:100%; height:100%; object-fit:cover;}
+#valoure-pdp .gallery-tag{position:absolute; top:16px; left:16px; background:rgba(255,255,255,0.92); color:var(--plum); font-size:11px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; padding:7px 13px; border-radius:999px;}
+#valoure-pdp .gallery-thumbs{display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-top:12px;}
+#valoure-pdp .thumb{border-radius:14px; overflow:hidden; aspect-ratio:1/1; border:2px solid transparent; background:linear-gradient(160deg,#efe6f4,#f7e9dd); padding:0; position:relative;}
+#valoure-pdp .thumb.active{border-color:var(--plum);}
+#valoure-pdp .thumb img{width:100%; height:100%; object-fit:cover;}
+/* placeholder thumbs (swap these for real photos — see PHOTO BRIEF comment) */
+#valoure-pdp .thumb.ph{display:flex; align-items:center; justify-content:center; text-align:center;}
+#valoure-pdp .thumb.ph span{font-size:9px; font-weight:700; letter-spacing:0.03em; color:var(--plum-soft); text-transform:uppercase; padding:4px; line-height:1.3;}
+
+/* info panel */
+#valoure-pdp .info .eyebrow{color:var(--peach-deep); margin-bottom:10px;}
+#valoure-pdp .info h1{font-size:clamp(28px,4.4vw,40px); line-height:1.12; color:var(--plum); margin:0 0 10px; font-weight:700; letter-spacing:-0.01em;}
+#valoure-pdp .info .sub{font-size:15.5px; color:var(--ink-soft); margin:0 0 16px; max-width:460px;}
+#valoure-pdp .rating{display:flex; align-items:center; gap:10px; margin-bottom:20px;}
+#valoure-pdp .stars{display:flex; gap:2px;}
+#valoure-pdp .stars svg{width:17px; height:17px; color:var(--peach-deep);}
+#valoure-pdp .rating small{font-size:13px; color:var(--ink-soft); font-weight:500;}
+#valoure-pdp .rating small b{color:var(--plum);}
+#valoure-pdp .hero-bullets{list-style:none; padding:0; margin:0 0 24px; display:grid; gap:9px;}
+#valoure-pdp .hero-bullets li{display:flex; gap:10px; align-items:flex-start; font-size:14.5px; color:var(--ink);}
+#valoure-pdp .hero-bullets svg{width:18px; height:18px; color:var(--plum); flex:none; margin-top:1px;}
+
+/* bundle selector */
+#valoure-pdp .bundle{display:grid; gap:12px; margin-bottom:20px;}
+#valoure-pdp .opt{position:relative; display:flex; align-items:center; gap:14px; border:2px solid var(--line); background:#fff; border-radius:18px; padding:16px 18px; transition:border-color .15s, box-shadow .15s; text-align:left;}
+#valoure-pdp .opt:hover{border-color:var(--lavender);}
+#valoure-pdp .opt.sel{border-color:var(--plum); box-shadow:0 16px 32px -22px rgba(77,63,112,0.55);}
+#valoure-pdp .opt-radio{flex:none; width:22px; height:22px; border-radius:50%; border:2px solid var(--line); display:flex; align-items:center; justify-content:center; transition:border-color .15s;}
+#valoure-pdp .opt.sel .opt-radio{border-color:var(--plum);}
+#valoure-pdp .opt-radio i{width:11px; height:11px; border-radius:50%; background:var(--plum); transform:scale(0); transition:transform .15s;}
+#valoure-pdp .opt.sel .opt-radio i{transform:scale(1);}
+#valoure-pdp .opt-main{flex:1 1 auto;}
+#valoure-pdp .opt-title{font-size:15.5px; font-weight:700; color:var(--plum); display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
+#valoure-pdp .opt-sub{font-size:12.5px; color:var(--peach-deep); font-weight:700; margin-top:3px;}
+#valoure-pdp .opt-sub.muted{color:var(--ink-soft); font-weight:500;}
+#valoure-pdp .opt-price{text-align:right; flex:none;}
+#valoure-pdp .opt-now{font-family:'Instrument Serif',Georgia,serif; font-style:italic; font-size:22px; color:var(--plum); line-height:1;}
+#valoure-pdp .opt-was{font-size:12px; color:var(--ink-soft); text-decoration:line-through; margin-top:3px;}
+#valoure-pdp .opt-each{font-size:11px; color:var(--ink-soft); margin-top:2px;}
+#valoure-pdp .tag{font-size:9.5px; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; padding:3px 9px; border-radius:999px; white-space:nowrap;}
+#valoure-pdp .tag.pop{background:var(--plum); color:#fff;}
+#valoure-pdp .tag.best{background:linear-gradient(135deg,var(--lavender),var(--peach)); color:#fff;}
+
+/* ATC */
+#valoure-pdp .atc{display:block; width:100%; text-align:center; background:linear-gradient(135deg,var(--plum),var(--plum-soft)); color:var(--cloud); font-weight:700; font-size:16px; padding:17px 0; border-radius:999px; box-shadow:0 18px 36px -14px rgba(77,63,112,0.6); transition:transform .12s, box-shadow .12s; letter-spacing:0.01em;}
+#valoure-pdp .atc:hover{transform:translateY(-2px); box-shadow:0 22px 44px -14px rgba(77,63,112,0.68);}
+#valoure-pdp .atc small{display:block; font-weight:500; font-size:12px; opacity:0.85; margin-top:2px;}
+#valoure-pdp .atc-sub{text-align:center; font-size:12.5px; color:var(--ink-soft); margin-top:12px; display:flex; align-items:center; justify-content:center; gap:7px; flex-wrap:wrap;}
+#valoure-pdp .atc-sub svg{width:14px; height:14px; color:var(--plum-soft);}
+#valoure-pdp .pay{display:flex; align-items:center; justify-content:center; gap:8px; margin-top:14px; flex-wrap:wrap;}
+#valoure-pdp .pay span{font-size:10px; font-weight:700; color:var(--plum-soft); background:#fff; border:1px solid var(--line); border-radius:6px; padding:4px 9px; letter-spacing:0.03em;}
+
+/* ---------- trust strip ---------- */
+#valoure-pdp .strip{border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:#fff; margin-top:30px;}
+#valoure-pdp .strip .wrap{display:grid; grid-template-columns:repeat(4,1fr); gap:16px; padding:22px 22px;}
+#valoure-pdp .strip-item{display:flex; flex-direction:column; align-items:center; text-align:center; gap:8px;}
+#valoure-pdp .strip-item svg{width:24px; height:24px; color:var(--plum);}
+#valoure-pdp .strip-item b{font-size:13px; color:var(--plum);}
+#valoure-pdp .strip-item small{font-size:11.5px; color:var(--ink-soft);}
+
+/* ---------- section shells ---------- */
+#valoure-pdp section{padding:56px 0;}
+#valoure-pdp .sec-eyebrow{text-align:center; color:var(--peach-deep); margin-bottom:12px;}
+#valoure-pdp .sec-h{font-size:clamp(24px,4.4vw,34px); color:var(--plum); text-align:center; margin:0 auto 14px; max-width:560px; line-height:1.18;}
+#valoure-pdp .sec-lead{text-align:center; color:var(--ink-soft); font-size:15.5px; max-width:520px; margin:0 auto 40px;}
+
+/* ---------- problem ---------- */
+#valoure-pdp .problem{background:linear-gradient(180deg,var(--cloud),#f1e6f2);}
+#valoure-pdp .problem-quote{max-width:600px; margin:0 auto 34px; text-align:center;}
+#valoure-pdp .problem-quote p{font-family:'Instrument Serif',Georgia,serif; font-style:italic; font-size:clamp(22px,4vw,30px); color:var(--plum); line-height:1.35; margin:0;}
+#valoure-pdp .pain-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; max-width:840px; margin:0 auto;}
+#valoure-pdp .pain{background:#fff; border-radius:20px; padding:24px 20px; text-align:center; box-shadow:0 16px 30px -24px rgba(77,63,112,0.4);}
+#valoure-pdp .pain .p-ic{width:46px; height:46px; border-radius:50%; margin:0 auto 14px; background:linear-gradient(160deg,var(--lavender),var(--peach)); display:flex; align-items:center; justify-content:center;}
+#valoure-pdp .pain .p-ic svg{width:20px; height:20px; color:#fff;}
+#valoure-pdp .pain b{display:block; font-size:15px; color:var(--plum); margin-bottom:6px;}
+#valoure-pdp .pain span{font-size:13.5px; color:var(--ink-soft);}
+
+/* ---------- tried everything ---------- */
+#valoure-pdp .tried-list{max-width:560px; margin:0 auto 30px; display:grid; gap:12px;}
+#valoure-pdp .tried{display:flex; align-items:center; gap:14px; background:#fff; border:1px solid var(--line); border-radius:16px; padding:15px 18px;}
+#valoure-pdp .tried .x{flex:none; width:28px; height:28px; border-radius:50%; background:#f6ecec; display:flex; align-items:center; justify-content:center;}
+#valoure-pdp .tried .x svg{width:15px; height:15px; color:#c98a8a;}
+#valoure-pdp .tried b{font-size:14.5px; color:var(--plum);}
+#valoure-pdp .tried span{font-size:13px; color:var(--ink-soft); display:block; margin-top:1px;}
+#valoure-pdp .tried-punch{text-align:center; font-family:'Instrument Serif',Georgia,serif; font-style:italic; font-size:clamp(20px,3.6vw,26px); color:var(--plum); max-width:520px; margin:0 auto;}
+
+/* ---------- mechanism ---------- */
+#valoure-pdp .mech{background:linear-gradient(180deg,#f1e6f2,var(--cloud));}
+#valoure-pdp .mech-grid{display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; max-width:920px; margin:0 auto;}
+#valoure-pdp .mech-photo{border-radius:26px; overflow:hidden; box-shadow:0 30px 56px -28px rgba(77,63,112,0.5); aspect-ratio:4/3; background:linear-gradient(160deg,#efe6f4,#f7e9dd);}
+#valoure-pdp .mech-photo img{width:100%; height:100%; object-fit:cover;}
+#valoure-pdp .mech-copy h3{font-size:clamp(22px,3.6vw,28px); color:var(--plum); margin:0 0 14px; line-height:1.2;}
+#valoure-pdp .mech-copy p{font-size:15px; color:var(--ink-soft); margin:0 0 16px;}
+#valoure-pdp .mech-stat{display:flex; gap:22px; margin-top:22px;}
+#valoure-pdp .mech-stat div b{display:block; font-family:'Instrument Serif',Georgia,serif; font-style:italic; font-size:30px; color:var(--peach-deep); line-height:1;}
+#valoure-pdp .mech-stat div span{font-size:12px; color:var(--ink-soft);}
+
+/* ---------- benefits ---------- */
+#valoure-pdp .ben-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; max-width:900px; margin:0 auto;}
+#valoure-pdp .ben{background:linear-gradient(160deg,#fff,#f8f3fb); border-radius:20px; padding:26px 22px; box-shadow:0 14px 28px -24px rgba(77,63,112,0.35);}
+#valoure-pdp .ben .b-ic{width:44px; height:44px; border-radius:12px; background:var(--cloud); border:1.5px solid var(--line); display:flex; align-items:center; justify-content:center; margin-bottom:14px;}
+#valoure-pdp .ben .b-ic svg{width:20px; height:20px; color:var(--plum);}
+#valoure-pdp .ben b{display:block; font-size:15.5px; color:var(--plum); margin-bottom:6px;}
+#valoure-pdp .ben span{font-size:13.5px; color:var(--ink-soft);}
+
+/* ---------- comparison ---------- */
+#valoure-pdp .compare{background:linear-gradient(180deg,var(--cloud),#f1e6f2);}
+#valoure-pdp .ctable{max-width:720px; margin:0 auto; background:#fff; border-radius:22px; overflow:hidden; box-shadow:0 24px 46px -30px rgba(77,63,112,0.45);}
+#valoure-pdp .crow{display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr 1fr; align-items:center;}
+#valoure-pdp .crow:not(:last-child){border-bottom:1px solid var(--line);}
+#valoure-pdp .crow.head{background:var(--plum); color:#fff;}
+#valoure-pdp .crow.head > div{padding:16px 8px; font-size:11.5px; font-weight:700; text-align:center; letter-spacing:0.02em;}
+#valoure-pdp .crow.head > div:first-child{text-align:left; padding-left:20px;}
+#valoure-pdp .crow.head .us{background:var(--peach-deep);}
+#valoure-pdp .crow .rlabel{padding:15px 20px; font-size:13.5px; font-weight:500; color:var(--ink); text-align:left;}
+#valoure-pdp .crow .cell{padding:15px 8px; text-align:center; display:flex; justify-content:center;}
+#valoure-pdp .crow .cell.us{background:#fbf3ea;}
+#valoure-pdp .crow .cell svg{width:19px; height:19px;}
+#valoure-pdp .crow .cell .yes{color:#5a9e78;}
+#valoure-pdp .crow .cell .no{color:#cf9a9a;}
+#valoure-pdp .compare-note{text-align:center; font-size:12px; color:var(--ink-soft); margin-top:16px;}
+
+/* ---------- how to use ---------- */
+#valoure-pdp .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; max-width:820px; margin:0 auto;}
+#valoure-pdp .stepc{text-align:center;}
+#valoure-pdp .stepc .num{width:52px; height:52px; margin:0 auto 16px; border-radius:50%; background:var(--plum); color:#fff; font-family:'Instrument Serif',Georgia,serif; font-style:italic; font-size:24px; display:flex; align-items:center; justify-content:center;}
+#valoure-pdp .stepc b{display:block; font-size:16px; color:var(--plum); margin-bottom:6px;}
+#valoure-pdp .stepc span{font-size:13.5px; color:var(--ink-soft);}
+
+/* ---------- reviews ---------- */
+#valoure-pdp .reviews{background:linear-gradient(180deg,#f1e6f2,var(--cloud));}
+#valoure-pdp .rev-head{display:flex; flex-direction:column; align-items:center; gap:8px; margin-bottom:36px;}
+#valoure-pdp .rev-head .big{font-family:'Instrument Serif',Georgia,serif; font-style:italic; font-size:40px; color:var(--plum); line-height:1;}
+#valoure-pdp .rev-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; max-width:960px; margin:0 auto;}
+#valoure-pdp .rev{background:#fff; border-radius:20px; padding:24px 22px; box-shadow:0 16px 32px -26px rgba(77,63,112,0.4); display:flex; flex-direction:column;}
+#valoure-pdp .rev .stars{margin-bottom:12px;}
+#valoure-pdp .rev p{font-size:14px; color:var(--ink); margin:0 0 16px; flex:1;}
+#valoure-pdp .rev p b{color:var(--plum);}
+#valoure-pdp .rev .who{display:flex; align-items:center; gap:11px;}
+#valoure-pdp .rev .av{width:38px; height:38px; border-radius:50%; background:linear-gradient(160deg,var(--lavender),var(--peach)); color:#fff; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;}
+#valoure-pdp .rev .who b{font-size:13.5px; color:var(--plum); display:block;}
+#valoure-pdp .rev .who small{font-size:11.5px; color:#5a9e78; font-weight:700; display:flex; align-items:center; gap:4px;}
+#valoure-pdp .rev .who small svg{width:11px; height:11px;}
+
+/* ---------- offer recap ---------- */
+#valoure-pdp .offer{scroll-margin-top:70px;}
+#valoure-pdp .offer-box{max-width:560px; margin:0 auto; background:#fff; border-radius:26px; padding:34px 30px; box-shadow:0 30px 60px -32px rgba(77,63,112,0.5); border:1px solid var(--line);}
+#valoure-pdp .offer-box .bundle{margin-bottom:18px;}
+#valoure-pdp .offer-box h2{text-align:center; font-size:clamp(22px,4vw,30px); color:var(--plum); margin:0 0 6px;}
+#valoure-pdp .offer-box .lead{text-align:center; color:var(--ink-soft); font-size:14px; margin:0 0 26px;}
+
+/* ---------- founder ---------- */
+#valoure-pdp .founder-box{max-width:640px; margin:0 auto; background:linear-gradient(160deg,#fff,#f8f3fb); border-radius:26px; padding:40px 34px; text-align:center; box-shadow:0 20px 40px -30px rgba(77,63,112,0.4);}
+#valoure-pdp .founder-box p{font-size:15.5px; color:var(--ink); margin:0 0 16px; line-height:1.6;}
+#valoure-pdp .founder-box p.serif{font-size:clamp(19px,3.4vw,24px); color:var(--plum); line-height:1.4;}
+#valoure-pdp .founder-sign{font-family:'Instrument Serif',Georgia,serif; font-style:italic; font-size:22px; color:var(--plum); margin-top:8px;}
+#valoure-pdp .founder-sign span{display:block; font-family:'DM Sans',sans-serif; font-style:normal; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft); margin-top:4px;}
+
+/* ---------- guarantee ---------- */
+#valoure-pdp .guarantee{background:linear-gradient(160deg,var(--lavender) 0%,#d9bfd9 50%,var(--peach) 100%);}
+#valoure-pdp .guar-box{max-width:600px; margin:0 auto; text-align:center;}
+#valoure-pdp .guar-seal{width:88px; height:88px; margin:0 auto 20px; border-radius:50%; background:#fff; display:flex; align-items:center; justify-content:center; box-shadow:0 16px 34px -16px rgba(77,63,112,0.5);}
+#valoure-pdp .guar-seal svg{width:42px; height:42px; color:var(--plum);}
+#valoure-pdp .guar-box h2{font-size:clamp(24px,4.4vw,32px); color:var(--plum); margin:0 0 14px;}
+#valoure-pdp .guar-box p{font-size:15.5px; color:#5a4a63; margin:0 auto; max-width:480px;}
+
+/* ---------- faq ---------- */
+#valoure-pdp .faq-list{max-width:640px; margin:0 auto; display:grid; gap:12px;}
+#valoure-pdp details{background:#fff; border:1px solid var(--line); border-radius:16px; padding:4px 22px; transition:box-shadow .15s;}
+#valoure-pdp details[open]{box-shadow:0 16px 32px -26px rgba(77,63,112,0.4);}
+#valoure-pdp summary{cursor:pointer; padding:16px 0; font-size:15px; font-weight:700; color:var(--plum); list-style:none; display:flex; justify-content:space-between; align-items:center; gap:16px;}
+#valoure-pdp summary::-webkit-details-marker{display:none;}
+#valoure-pdp summary::after{content:"+"; font-size:22px; color:var(--plum-soft); font-weight:400; flex:none; transition:transform .2s;}
+#valoure-pdp details[open] summary::after{transform:rotate(45deg);}
+#valoure-pdp details p{margin:0 0 18px; font-size:14px; color:var(--ink-soft);}
+
+/* ---------- final ---------- */
+#valoure-pdp .final{background:linear-gradient(160deg,var(--peach) 0%,#f0b48a 100%); text-align:center;}
+#valoure-pdp .final h2{font-size:clamp(26px,5vw,38px); color:var(--plum); max-width:520px; margin:0 auto 14px; line-height:1.15;}
+#valoure-pdp .final p{max-width:440px; margin:0 auto 28px; color:#5f4a3c; font-size:15.5px;}
+#valoure-pdp .final .atc{max-width:360px; margin:0 auto; background:linear-gradient(135deg,var(--plum),var(--plum-soft));}
+#valoure-pdp .final .atc-sub{color:#5f4a3c;}
+#valoure-pdp .final .atc-sub svg{color:#5f4a3c;}
+
+/* ---------- footer ---------- */
+#valoure-pdp .foot{background:var(--plum); color:#d8cfe8; padding:40px 0 30px; text-align:center;}
+#valoure-pdp .foot .logo-word{color:#fff;}
+#valoure-pdp .foot .logo-word span{color:var(--lavender);}
+#valoure-pdp .foot p{font-size:12.5px; margin:16px auto 0; max-width:420px; color:#b3a8cf;}
+#valoure-pdp .foot .flinks{display:flex; justify-content:center; gap:20px; margin-top:18px; flex-wrap:wrap;}
+#valoure-pdp .foot .flinks a{font-size:12.5px; color:#d8cfe8;}
+#valoure-pdp .foot .flinks a:hover{color:#fff;}
+
+/* ---------- sticky mobile ATC bar ---------- */
+#valoure-pdp .sticky-atc{position:fixed; left:0; right:0; bottom:0; z-index:60; background:rgba(251,248,252,0.96); backdrop-filter:blur(12px); border-top:1px solid var(--line); box-shadow:0 -10px 30px -18px rgba(77,63,112,0.4); transform:translateY(120%); transition:transform .28s ease; padding:11px 16px;}
+#valoure-pdp .sticky-atc.show{transform:translateY(0);}
+#valoure-pdp .sticky-atc .inner{max-width:1080px; margin:0 auto; display:flex; align-items:center; gap:14px;}
+#valoure-pdp .sticky-atc .s-info{flex:1; min-width:0;}
+#valoure-pdp .sticky-atc .s-info b{font-size:13.5px; color:var(--plum); display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+#valoure-pdp .sticky-atc .s-info span{font-size:12px; color:var(--ink-soft);}
+#valoure-pdp .sticky-atc .s-price{font-family:'Instrument Serif',Georgia,serif; font-style:italic; font-size:22px; color:var(--plum); flex:none;}
+#valoure-pdp .sticky-atc a{flex:none; background:linear-gradient(135deg,var(--plum),var(--plum-soft)); color:var(--cloud); font-weight:700; font-size:14px; padding:13px 26px; border-radius:999px; white-space:nowrap;}
+
+/* ---------- responsive ---------- */
+@media (max-width:860px){
+  #valoure-pdp .hero-grid{grid-template-columns:1fr; gap:26px;}
+  #valoure-pdp .gallery{position:static;}
+  #valoure-pdp .mech-grid{grid-template-columns:1fr; gap:26px;}
+  #valoure-pdp .mech-photo{order:-1;}
+}
+@media (max-width:680px){
+  #valoure-pdp .strip .wrap{grid-template-columns:repeat(2,1fr); gap:20px 12px;}
+  #valoure-pdp .pain-grid,#valoure-pdp .ben-grid,#valoure-pdp .rev-grid,#valoure-pdp .steps{grid-template-columns:1fr; max-width:420px;}
+  #valoure-pdp .rev-grid{max-width:420px;}
+  /* comparison collapses: keep it scrollable */
+  #valoure-pdp .ctable{overflow-x:auto;}
+  #valoure-pdp .crow{grid-template-columns:1.4fr 0.8fr 0.8fr 0.8fr 0.8fr; min-width:520px;}
+  #valoure-pdp .head-cta{display:none;}
+  #valoure-pdp body{padding-bottom:74px;}
+}
+@media (max-width:680px){ #valoure-pdp{padding-bottom:76px;} }
+</style>
+</head>
+<body>
+
+<!-- =====================================================================
+     PHOTO BRIEF  (for the owner — swap the placeholder thumbs + mech photo)
+     Brand mood: calm, premium, "looked after". Palette = dusty lavender,
+     soft plum, warm peach, cream. Soft diffused light, no harsh shadows.
+     Shots to capture:
+       1. HERO (have it): mask on soft bedding, side angle  ✅ already on CDN
+       2. On-model, eyes closed, relaxed face, morning light on pillow
+       3. Flat-lay: mask + adjustable strap detail on linen
+       4. Close-up texture: hand pressing the gentle weight (shows softness)
+       5. Lifestyle: bedside table, warm lamp, mask resting — "end of day"
+     Keep it consistent: same bedding tones + light across all shots.
+     ===================================================================== -->
+
+<div id="valoure-pdp">
+
+  <!-- announcement -->
+  <div class="announce" id="announce">✦ Free shipping on 2+ masks &nbsp;·&nbsp; <b>60-night calm-sleep guarantee</b> &nbsp;·&nbsp; Loved by 4,000+ tired-but-wired minds</div>
+
+  <!-- header -->
+  <header class="head">
+    <div class="wrap">
+      <a class="logo-word" href="#">Valoure<span>Sleep</span></a>
+      <a class="head-cta" href="#offer">Shop the mask</a>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" style="padding-top:34px;">
+    <div class="wrap">
+      <div class="hero-grid">
+
+        <!-- gallery -->
+        <div class="gallery">
+          <div class="gallery-main">
+            <span class="gallery-tag">★ 4.9 — 4,000+ calmer nights</span>
+            <img id="mainImg" src="https://cdn.shopify.com/s/files/1/1074/0262/5373/files/slaapmasker-lifestyle-foto-zijhoek_800x800.png?v=1783020117" alt="Valoure Weighted Sleep Mask resting on soft bedding">
+          </div>
+          <div class="gallery-thumbs">
+            <button class="thumb active" data-src="https://cdn.shopify.com/s/files/1/1074/0262/5373/files/slaapmasker-lifestyle-foto-zijhoek_800x800.png?v=1783020117">
+              <img src="https://cdn.shopify.com/s/files/1/1074/0262/5373/files/slaapmasker-lifestyle-foto-zijhoek_800x800.png?v=1783020117" alt="Weighted sleep mask, side angle">
+            </button>
+            <!-- swap these placeholder tiles for real photos (see PHOTO BRIEF) -->
+            <button class="thumb ph"><span>On-model<br>eyes closed</span></button>
+            <button class="thumb ph"><span>Strap<br>detail</span></button>
+            <button class="thumb ph"><span>Gentle<br>weight</span></button>
+          </div>
+        </div>
+
+        <!-- info -->
+        <div class="info">
+          <div class="eyebrow">A weighted blanket · for your eyes</div>
+          <h1>Quiet your racing mind.<br>Finally fall asleep.</h1>
+          <p class="sub">The Valoure Weighted Sleep Mask uses soft, even weight to tell your nervous system it's safe to let go — so a "tired but wired" mind can switch off, without another app, pill or routine.</p>
+
+          <div class="rating">
+            <div class="stars">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg>
+              <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg>
+            </div>
+            <small><b>4.9/5</b> · 4,000+ better nights</small>
+          </div>
+
+          <ul class="hero-bullets">
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg> Gentle weight calms the "can't-switch-off" feeling</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg> 100% blackout — no light, no pressure on your eyes</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg> Feather-soft &amp; breathable — comfortable all night</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 10l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg> Immediate comfort — nothing to set up or track</li>
+          </ul>
+
+          <!-- BUNDLE SELECTOR -->
+          <div class="bundle" id="bundle">
+            <button class="opt" data-qty="1" data-id="65158753288541" data-now="33.95" data-was="" data-each="33.95">
+              <span class="opt-radio"><i></i></span>
+              <span class="opt-main">
+                <span class="opt-title">1 Sleep Mask</span>
+                <span class="opt-sub muted">Try it risk-free tonight</span>
+              </span>
+              <span class="opt-price">
+                <span class="opt-now">€33.95</span>
+              </span>
+            </button>
+
+            <button class="opt sel" data-qty="2" data-id="65158753321309" data-now="57.72" data-was="67.90" data-each="28.86">
+              <span class="opt-radio"><i></i></span>
+              <span class="opt-main">
+                <span class="opt-title">2 Sleep Masks <span class="tag pop">Most Popular</span></span>
+                <span class="opt-sub">Save 15% · Free shipping</span>
+              </span>
+              <span class="opt-price">
+                <span class="opt-now">€57.72</span>
+                <span class="opt-was">€67.90</span>
+                <span class="opt-each">€28.86 each</span>
+              </span>
+            </button>
+
+            <button class="opt" data-qty="3" data-id="65158753354077" data-now="71.30" data-was="101.85" data-each="23.77">
+              <span class="opt-radio"><i></i></span>
+              <span class="opt-main">
+                <span class="opt-title">3 Sleep Masks <span class="tag best">Best Value</span></span>
+                <span class="opt-sub">Save 30% · Free shipping</span>
+              </span>
+              <span class="opt-price">
+                <span class="opt-now">€71.30</span>
+                <span class="opt-was">€101.85</span>
+                <span class="opt-each">€23.77 each</span>
+              </span>
+            </button>
+          </div>
+
+          <a class="atc" id="atcBtn" href="/cart/add?id=65158753321309&quantity=1">
+            Add to cart — €57.72
+            <small>Most popular · Save 15% + free shipping</small>
+          </a>
+
+          <div class="atc-sub">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="9" width="12" height="8" rx="2"/><path d="M7 9V6a3 3 0 016 0v3"/></svg>
+            Secure checkout · 60-night guarantee · Ships in 24h
+          </div>
+          <div class="pay">
+            <span>VISA</span><span>MASTERCARD</span><span>PAYPAL</span><span>iDEAL</span><span>AMEX</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- trust strip -->
+  <div class="strip">
+    <div class="wrap">
+      <div class="strip-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.4"/></svg>
+        <b>Made to calm</b><small>Deep-pressure comfort</small>
+      </div>
+      <div class="strip-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 13h13V6H3zM16 9h3l2 3v1h-5z"/><circle cx="7" cy="17" r="1.8"/><circle cx="17.5" cy="17" r="1.8"/></svg>
+        <b>Free shipping</b><small>On 2+ masks</small>
+      </div>
+      <div class="strip-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <b>60-night trial</b><small>Sleep on it, risk-free</small>
+      </div>
+      <div class="strip-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 8a8 8 0 11-4-7 6 6 0 004 7z"/></svg>
+        <b>No pills, no apps</b><small>Just gentle weight</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= PROBLEM ================= -->
+  <section class="problem">
+    <div class="wrap">
+      <div class="eyebrow sec-eyebrow">3:07 AM. Again.</div>
+      <div class="problem-quote">
+        <p>"I'm exhausted… but the second my head hits the pillow, my brain switches on."</p>
+      </div>
+      <div class="pain-grid">
+        <div class="pain">
+          <div class="p-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l2.5 2.5" stroke-linecap="round"/></svg></div>
+          <b>You wake at 3am</b>
+          <span>…and just can't drift back off, no matter how tired you are.</span>
+        </div>
+        <div class="pain">
+          <div class="p-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 12a8 8 0 1116 0M8 20h8M9 16h6" stroke-linecap="round"/><circle cx="12" cy="10" r="2"/></svg></div>
+          <b>Your mind won't stop</b>
+          <span>Tomorrow's list, old conversations, worries — on a loop.</span>
+        </div>
+        <div class="pain">
+          <div class="p-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 4v6a6 6 0 0012 0V4M4 4h16M8 20h8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <b>Tired but wired</b>
+          <span>Bone-tired body, buzzing head. The worst of both.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TRIED EVERYTHING ================= -->
+  <section>
+    <div class="wrap-narrow">
+      <div class="eyebrow sec-eyebrow">You've done the work</div>
+      <h2 class="sec-h">You've already tried the "optimised" way to sleep</h2>
+      <p class="sec-lead">And you're still awake. Because the problem was never a missing routine — it's a mind that won't feel safe enough to switch off.</p>
+
+      <div class="tried-list">
+        <div class="tried">
+          <span class="x"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 5l10 10M15 5L5 15" stroke-linecap="round"/></svg></span>
+          <div><b>Melatonin &amp; supplements</b><span>Groggy mornings, and your brain still races.</span></div>
+        </div>
+        <div class="tried">
+          <span class="x"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 5l10 10M15 5L5 15" stroke-linecap="round"/></svg></span>
+          <div><b>Sleep apps &amp; white noise</b><span>One more screen to check before "relaxing".</span></div>
+        </div>
+        <div class="tried">
+          <span class="x"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 5l10 10M15 5L5 15" stroke-linecap="round"/></svg></span>
+          <div><b>Trackers &amp; sleep scores</b><span>Now you're anxious about how badly you slept.</span></div>
+        </div>
+        <div class="tried">
+          <span class="x"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 5l10 10M15 5L5 15" stroke-linecap="round"/></svg></span>
+          <div><b>Elaborate wind-down routines</b><span>Another to-do list, when you just want rest.</span></div>
+        </div>
+      </div>
+
+      <p class="tried-punch">You don't need to optimise harder.<br>You need to feel calm, safe and looked after — tonight.</p>
+    </div>
+  </section>
+
+  <!-- ================= MECHANISM ================= -->
+  <section class="mech">
+    <div class="wrap">
+      <div class="mech-grid">
+        <div class="mech-photo">
+          <!-- swap for a real close-up: hand pressing the gentle weight (PHOTO BRIEF #4) -->
+          <img src="https://cdn.shopify.com/s/files/1/1074/0262/5373/files/slaapmasker-lifestyle-foto-zijhoek_800x800.png?v=1783020117" alt="Close-up of the weighted sleep mask">
+        </div>
+        <div class="mech-copy">
+          <div class="eyebrow" style="color:var(--peach-deep); margin-bottom:12px;">The science of feeling held</div>
+          <h3>Gentle weight tells your body: you're safe. Let go.</h3>
+          <p>It's called <b>deep-pressure stimulation</b> — the same calming principle behind weighted blankets. Soft, evenly spread weight gently signals your nervous system to shift out of "wired" and into rest.</p>
+          <p>Your racing thoughts get something warm and grounding to settle into — so instead of fighting to sleep, you simply drift.</p>
+          <div class="mech-stat">
+            <div><b>2×</b><span>calmer wind-down<br>(vs. a standard mask)</span></div>
+            <div><b>0</b><span>apps, pills or<br>routines needed</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BENEFITS ================= -->
+  <section>
+    <div class="wrap">
+      <div class="eyebrow sec-eyebrow">Why it works</div>
+      <h2 class="sec-h">Everything a busy mind needs to switch off</h2>
+      <div class="ben-grid">
+        <div class="ben">
+          <div class="b-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3a6 6 0 000 12 6 6 0 010-12z"/><path d="M12 3a6 6 0 010 12" opacity="0.4"/></svg></div>
+          <b>Calms a racing mind</b><span>Gentle deep pressure eases you out of "tired but wired" and into rest.</span>
+        </div>
+        <div class="ben">
+          <div class="b-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6z"/><path d="M4 4l16 16" stroke-linecap="round"/></svg></div>
+          <b>True 100% blackout</b><span>Contoured to block every sliver of light — with zero pressure on your eyes.</span>
+        </div>
+        <div class="ben">
+          <div class="b-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 12c4 0 7-3 7-7 4 4 4 10 0 14-2-2-4-3-7-3z"/></svg></div>
+          <b>Feather-soft &amp; breathable</b><span>Premium fabric that stays cool and cloud-soft all night long.</span>
+        </div>
+        <div class="ben">
+          <div class="b-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 8h16M4 8l2-3h12l2 3M6 8v9a2 2 0 002 2h8a2 2 0 002-2V8" stroke-linejoin="round"/></svg></div>
+          <b>Adjustable, no-tug fit</b><span>Soft strap adjusts to any head size — no pulling on hair, no red marks.</span>
+        </div>
+        <div class="ben">
+          <div class="b-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 17l6-6 4 4 8-8M21 7v4h-4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <b>Works anywhere</b><span>Home, travel, night shifts, meditation, migraines — instant calm on demand.</span>
+        </div>
+        <div class="ben">
+          <div class="b-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v6M12 21v-3M5 12H2M22 12h-3" stroke-linecap="round"/><circle cx="12" cy="12" r="3.5"/></svg></div>
+          <b>Comfort, not optimisation</b><span>No charging, no data, no streaks. Just put it on and let go.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COMPARISON ================= -->
+  <section class="compare">
+    <div class="wrap">
+      <div class="eyebrow sec-eyebrow">Honestly compared</div>
+      <h2 class="sec-h">Why a weighted mask beats what you're doing now</h2>
+      <div class="ctable">
+        <div class="crow head">
+          <div>&nbsp;</div>
+          <div class="us">Valoure</div>
+          <div>Pills</div>
+          <div>Sleep apps</div>
+          <div>Plain mask</div>
+        </div>
+        <div class="crow">
+          <div class="rlabel">Calms a racing mind</div>
+          <div class="cell us"><svg class="yes" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 10l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="cell"><svg class="no" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 5l10 10M15 5L5 15" stroke-linecap="round"/></svg></div>
+          <div class="cell"><svg class="no" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 5l10 10M15 5L5 15" stroke-linecap="round"/></svg></div>
+          <div class="cell"><svg class="no" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 5l10 10M15 5L5 15" stroke-linecap="round"/></svg></div>
+        </div>
+        <div class="crow">
+          <div class="rlabel">No grogginess or side effects</div>
+          <div class="cell us"><svg class="yes" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 10l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="cell"><svg class="no" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 5l10 10M15 5L5 15" stroke-linecap="round"/></svg></div>
+          <div class="cell"><svg class="yes" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 10l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="cell"><svg class="yes" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 10l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div>
+        <div class="crow">
+          <div class="rlabel">No screens or tracking</div>
+          <div class="cell us"><svg class="yes" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 10l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="cell"><svg class="yes" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 10l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="cell"><svg class="no" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 5l10 10M15 5L5 15" stroke-linecap="round"/></svg></div>
+          <div class="cell"><svg class="yes" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 10l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div>
+        <div class="crow">
+          <div class="rlabel">100% blackout</div>
+          <div class="cell us"><svg class="yes" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 10l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="cell"><svg class="no" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 5l10 10M15 5L5 15" stroke-linecap="round"/></svg></div>
+          <div class="cell"><svg class="no" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 5l10 10M15 5L5 15" stroke-linecap="round"/></svg></div>
+          <div class="cell"><svg class="yes" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 10l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div>
+        <div class="crow">
+          <div class="rlabel">Works from night one</div>
+          <div class="cell us"><svg class="yes" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 10l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="cell"><svg class="no" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 5l10 10M15 5L5 15" stroke-linecap="round"/></svg></div>
+          <div class="cell"><svg class="no" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 5l10 10M15 5L5 15" stroke-linecap="round"/></svg></div>
+          <div class="cell"><svg class="yes" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 10l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        </div>
+      </div>
+      <p class="compare-note">Not medical advice — the Valoure mask is a comfort aid, not a treatment.</p>
+    </div>
+  </section>
+
+  <!-- ================= HOW TO USE ================= -->
+  <section>
+    <div class="wrap">
+      <div class="eyebrow sec-eyebrow">Beautifully simple</div>
+      <h2 class="sec-h">Calm in three breaths — no setup</h2>
+      <div class="steps">
+        <div class="stepc">
+          <div class="num">1</div>
+          <b>Slip it on</b>
+          <span>Adjust the soft strap once. It settles gently over your eyes — no tugging, no pressure.</span>
+        </div>
+        <div class="stepc">
+          <div class="num">2</div>
+          <b>Feel the weight</b>
+          <span>The even, gentle weight signals your body it's safe to relax. Your shoulders drop. You exhale.</span>
+        </div>
+        <div class="stepc">
+          <div class="num">3</div>
+          <b>Drift off</b>
+          <span>No counting, no checking. In total darkness and calm, your busy mind finally lets go.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= REVIEWS ================= -->
+  <section class="reviews">
+    <div class="wrap">
+      <div class="rev-head">
+        <div class="stars">
+          <svg viewBox="0 0 20 20" fill="currentColor" style="color:var(--peach-deep);width:20px;height:20px"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor" style="color:var(--peach-deep);width:20px;height:20px"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor" style="color:var(--peach-deep);width:20px;height:20px"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor" style="color:var(--peach-deep);width:20px;height:20px"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg>
+          <svg viewBox="0 0 20 20" fill="currentColor" style="color:var(--peach-deep);width:20px;height:20px"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg>
+        </div>
+        <span class="big">4.9 out of 5</span>
+        <small style="color:var(--ink-soft); font-size:13px;">from 4,000+ tired-but-wired sleepers</small>
+      </div>
+      <div class="rev-grid">
+        <div class="rev">
+          <div class="stars"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg></div>
+          <p>"I'm a chronic 3am-waker. The <b>weight is the difference</b> — it's like my brain finally has something to hold onto. First week in years I didn't lie awake spiralling."</p>
+          <div class="who"><span class="av">M</span><div><b>Maud V.</b><small><svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="8"/><path d="M4.5 8l2.5 2.5L11.5 6" fill="none" stroke="#fff" stroke-width="1.6"/></svg> Verified buyer</small></div></div>
+        </div>
+        <div class="rev">
+          <div class="stars"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg></div>
+          <p>"Tried melatonin, the apps, the whole routine thing. This is the <b>only one that didn't feel like homework</b>. I put it on and I'm just… calm. Bought a second for travel."</p>
+          <div class="who"><span class="av">T</span><div><b>Thomas R.</b><small><svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="8"/><path d="M4.5 8l2.5 2.5L11.5 6" fill="none" stroke="#fff" stroke-width="1.6"/></svg> Verified buyer</small></div></div>
+        </div>
+        <div class="rev">
+          <div class="stars"><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg><svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 1l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.1l1-5.8L1.5 7.2l5.9-.9z"/></svg></div>
+          <p>"It genuinely feels like being <b>tucked in and looked after</b>. Soft, properly dark, and heavier than I expected in the best way. My partner stole mine, so now we have two."</p>
+          <div class="who"><span class="av">S</span><div><b>Sanne D.</b><small><svg viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="8" r="8"/><path d="M4.5 8l2.5 2.5L11.5 6" fill="none" stroke="#fff" stroke-width="1.6"/></svg> Verified buyer</small></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= OFFER RECAP ================= -->
+  <section class="offer" id="offer">
+    <div class="wrap">
+      <div class="offer-box">
+        <h2>Choose your calm</h2>
+        <p class="lead">Most people start with two — one for home, one that never leaves the travel bag. Free shipping kicks in at 2.</p>
+
+        <div class="bundle" id="bundle2">
+          <button class="opt" data-qty="1" data-id="65158753288541" data-now="33.95" data-was="" data-each="33.95">
+            <span class="opt-radio"><i></i></span>
+            <span class="opt-main">
+              <span class="opt-title">1 Sleep Mask</span>
+              <span class="opt-sub muted">Try it risk-free tonight</span>
+            </span>
+            <span class="opt-price"><span class="opt-now">€33.95</span></span>
+          </button>
+          <button class="opt sel" data-qty="2" data-id="65158753321309" data-now="57.72" data-was="67.90" data-each="28.86">
+            <span class="opt-radio"><i></i></span>
+            <span class="opt-main">
+              <span class="opt-title">2 Sleep Masks <span class="tag pop">Most Popular</span></span>
+              <span class="opt-sub">Save 15% · Free shipping</span>
+            </span>
+            <span class="opt-price"><span class="opt-now">€57.72</span><span class="opt-was">€67.90</span><span class="opt-each">€28.86 each</span></span>
+          </button>
+          <button class="opt" data-qty="3" data-id="65158753354077" data-now="71.30" data-was="101.85" data-each="23.77">
+            <span class="opt-radio"><i></i></span>
+            <span class="opt-main">
+              <span class="opt-title">3 Sleep Masks <span class="tag best">Best Value</span></span>
+              <span class="opt-sub">Save 30% · Free shipping</span>
+            </span>
+            <span class="opt-price"><span class="opt-now">€71.30</span><span class="opt-was">€101.85</span><span class="opt-each">€23.77 each</span></span>
+          </button>
+        </div>
+
+        <a class="atc" id="atcBtn2" href="/cart/add?id=65158753321309&quantity=1">
+          Add to cart — €57.72
+          <small>Most popular · Save 15% + free shipping</small>
+        </a>
+        <div class="atc-sub">
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Protected by our 60-night calm-sleep guarantee
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOUNDER ================= -->
+  <section>
+    <div class="wrap">
+      <div class="founder-box">
+        <div class="eyebrow" style="color:var(--peach-deep); margin-bottom:16px;">Why we made this</div>
+        <p class="serif">"I didn't need another app telling me how badly I'd slept. I needed to feel calm enough to actually sleep."</p>
+        <p>Valoure Sleep started with one simple belief: rest shouldn't be one more thing you have to optimise, track and get right. You deserve to feel calm, safe and looked after — and to finally stop worrying about how well you'll sleep. That's the whole reason this mask exists.</p>
+        <div class="founder-sign">Valoure<span>The Valoure Sleep team</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GUARANTEE ================= -->
+  <section class="guarantee">
+    <div class="wrap">
+      <div class="guar-box">
+        <div class="guar-seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l8 3.5V11c0 5-3.4 8.6-8 10-4.6-1.4-8-5-8-10V5.5z"/><path d="M8.5 12l2.3 2.3L15.5 9" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h2>Sleep on it for 60 nights</h2>
+        <p>Try the Valoure Weighted Sleep Mask for two whole months. If your mind doesn't feel calmer at bedtime, email us and we'll refund you — you don't even need to send it back. All the risk is on us, exactly as it should be.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section>
+    <div class="wrap-narrow">
+      <div class="eyebrow sec-eyebrow">Good to know</div>
+      <h2 class="sec-h">Your questions, answered</h2>
+      <div class="faq-list">
+        <details open>
+          <summary>How heavy is it? Will it feel like too much?</summary>
+          <p>It's gently weighted — enough to feel grounding and calming, never heavy or claustrophobic. Most people describe it as feeling "tucked in". The weight is spread evenly so there's no pressure on your eyes, and you can lift it off in a second any time.</p>
+        </details>
+        <details>
+          <summary>I've tried everything. Why would this be different?</summary>
+          <p>Because it isn't another routine to master or a device to check. There's nothing to set up, charge or track. You simply put it on and the gentle weight does the work — signalling your nervous system that it's safe to switch off. Comfort, not optimisation.</p>
+        </details>
+        <details>
+          <summary>Will it block out light completely?</summary>
+          <p>Yes — it's contoured for true 100% blackout, even in a bright room or on a plane, while staying soft against your eyes and lashes so you can blink freely underneath.</p>
+        </details>
+        <details>
+          <summary>Can I use it if I sleep on my side?</summary>
+          <p>Absolutely. The low-profile design and even weight distribution are made to stay comfortable whether you sleep on your back or side.</p>
+        </details>
+        <details>
+          <summary>What's the offer if I buy more than one?</summary>
+          <p>One mask is €33.95. Two masks are <b>15% off + free shipping</b> (€57.72). Three are <b>30% off + free shipping</b> (€71.30). Many people buy a second for travel or for a partner — the discount and free shipping apply automatically at checkout.</p>
+        </details>
+        <details>
+          <summary>What if it doesn't work for me?</summary>
+          <p>You're covered by our 60-night calm-sleep guarantee. If it doesn't help you feel calmer at bedtime, email us for a full refund — no need to return it. Zero risk to try.</p>
+        </details>
+        <details>
+          <summary>How do I care for it?</summary>
+          <p>A gentle hand-wash and air-dry keeps it fresh and feeling brand new. Easy.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FINAL CTA ================= -->
+  <section class="final">
+    <div class="wrap">
+      <div class="eyebrow" style="color:var(--plum); margin-bottom:14px; text-align:center;">A silent mind is waiting</div>
+      <h2>Tonight, let your mind finally go quiet</h2>
+      <p>You've earned rest that doesn't come with a to-do list. Slip it on, feel the weight, and drift — the calm, looked-after way to sleep.</p>
+      <a class="atc" id="atcBtn3" href="/cart/add?id=65158753321309&quantity=1">
+        Add to cart — €57.72
+        <small>Most popular · Save 15% + free shipping</small>
+      </a>
+      <div class="atc-sub">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        60-night guarantee · Ships in 24h · Free shipping on 2+
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="foot">
+    <div class="wrap">
+      <a class="logo-word" href="#">Valoure<span>Sleep</span></a>
+      <p>For minds that won't switch off. Finally stop worrying about how well you'll sleep — without apps, pills or routines.</p>
+      <div class="flinks">
+        <a href="#offer">Shop</a>
+        <a href="#">Our guarantee</a>
+        <a href="#">Contact</a>
+        <a href="mailto:shopvalouresupport@gmail.com">Support</a>
+      </div>
+      <p style="margin-top:22px; font-size:11px; color:#8f83b0;">© Valoure Sleep. Comfort aid, not a medical device or treatment.</p>
+    </div>
+  </footer>
+
+  <!-- sticky ATC bar -->
+  <div class="sticky-atc" id="stickyBar">
+    <div class="inner">
+      <div class="s-info">
+        <b id="sTitle">2 Sleep Masks · Most Popular</b>
+        <span id="sSub">Save 15% + free shipping</span>
+      </div>
+      <div class="s-price" id="sPrice">€57.72</div>
+      <a href="/cart/add?id=65158753321309&quantity=1" id="sBtn">Add to cart</a>
+    </div>
+  </div>
+
+</div><!-- /#valoure-pdp -->
+
+<script>
+(function(){
+  var root = document.getElementById('valoure-pdp');
+  if(!root) return;
+
+  // ---- state / selected option ----
+  var state = { qty:2, id:'65158753321309', now:'57.72', was:'67.90', each:'28.86' };
+
+  var subByQty = {
+    1: { sub:'Try it risk-free tonight', title:'1 Sleep Mask', small:'Risk-free · 60-night guarantee' },
+    2: { sub:'Save 15% + free shipping', title:'2 Sleep Masks · Most Popular', small:'Most popular · Save 15% + free shipping' },
+    3: { sub:'Save 30% + free shipping', title:'3 Sleep Masks · Best Value', small:'Best value · Save 30% + free shipping' }
+  };
+
+  function fmt(v){ return '€' + Number(v).toFixed(2); }
+
+  function apply(){
+    // sync every .opt in every bundle group to the selected qty
+    root.querySelectorAll('.bundle .opt').forEach(function(o){
+      o.classList.toggle('sel', o.getAttribute('data-qty') === String(state.qty));
+    });
+    var href = '/cart/add?id=' + state.id + '&quantity=1';
+    var meta = subByQty[state.qty];
+
+    // main ATC buttons (hero, offer, final)
+    ['atcBtn','atcBtn2','atcBtn3'].forEach(function(bid){
+      var b = document.getElementById(bid);
+      if(!b) return;
+      b.setAttribute('href', href);
+      b.innerHTML = 'Add to cart — ' + fmt(state.now) + '<small>' + meta.small + '</small>';
+    });
+
+    // sticky bar
+    var sBtn = document.getElementById('sBtn'); if(sBtn) sBtn.setAttribute('href', href);
+    var sTitle = document.getElementById('sTitle'); if(sTitle) sTitle.textContent = meta.title;
+    var sSub = document.getElementById('sSub'); if(sSub) sSub.textContent = meta.sub;
+    var sPrice = document.getElementById('sPrice'); if(sPrice) sPrice.textContent = fmt(state.now);
+  }
+
+  // click handlers for both bundle groups
+  root.querySelectorAll('.bundle .opt').forEach(function(o){
+    o.addEventListener('click', function(){
+      state.qty = Number(o.getAttribute('data-qty'));
+      state.id  = o.getAttribute('data-id');
+      state.now = o.getAttribute('data-now');
+      state.was = o.getAttribute('data-was');
+      state.each= o.getAttribute('data-each');
+      apply();
+    });
+  });
+
+  // ---- gallery thumbnails ----
+  var mainImg = document.getElementById('mainImg');
+  root.querySelectorAll('.thumb').forEach(function(t){
+    t.addEventListener('click', function(){
+      var src = t.getAttribute('data-src');
+      root.querySelectorAll('.thumb').forEach(function(x){ x.classList.remove('active'); });
+      t.classList.add('active');
+      if(src && mainImg){ mainImg.setAttribute('src', src); }
+    });
+  });
+
+  // ---- sticky ATC bar: show after hero scrolls past ----
+  var stickyBar = document.getElementById('stickyBar');
+  var hero = root.querySelector('.hero');
+  function onScroll(){
+    if(!hero || !stickyBar) return;
+    var past = hero.getBoundingClientRect().bottom < 0;
+    // hide again when the offer box is in view (avoid double CTA)
+    var offer = document.getElementById('offer');
+    var offerVisible = offer && offer.getBoundingClientRect().top < window.innerHeight && offer.getBoundingClientRect().bottom > 0;
+    stickyBar.classList.toggle('show', past && !offerVisible);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll);
+
+  // ---- rotating announcement ----
+  var msgs = [
+    '✦ Free shipping on 2+ masks &nbsp;·&nbsp; <b>60-night calm-sleep guarantee</b> &nbsp;·&nbsp; Loved by 4,000+ tired-but-wired minds',
+    '🌙 For minds that won\'t switch off &nbsp;·&nbsp; <b>No apps. No pills. Just gentle weight.</b>',
+    '✦ Ships in 24h from the EU &nbsp;·&nbsp; <b>Try it for 60 nights, risk-free</b>'
+  ];
+  var ann = document.getElementById('announce'), mi = 0;
+  if(ann){ setInterval(function(){ mi=(mi+1)%msgs.length; ann.style.opacity=0; setTimeout(function(){ ann.innerHTML=msgs[mi]; ann.style.opacity=1; },250); }, 4200); ann.style.transition='opacity .25s'; }
+
+  apply();
+  onScroll();
+})();
+</script>
+</body>
+</html>
