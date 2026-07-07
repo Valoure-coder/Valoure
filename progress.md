@@ -99,5 +99,20 @@ Legend: `READ` = read-only API call · `WRITE` = mutation · `FILE` = local file
 - **Live variant prices still encode the OLD offer** (10%/20%): 2-pack €61.11, 3-pack €81.48.
   For checkout to match the new PDP, these must be updated to **€57.72** and **€71.30**.
   Not touched yet (live-store change → review gate). Awaiting owner approval.
-- PDP is a **local file only** — nothing published to the store or theme.
 - Placeholder gallery thumbs + mech photo contain a PHOTO BRIEF for real shots to add.
+
+## Session 3 (cont.) — PDP installed on a draft theme (owner chose option a)
+
+| # | Type | Action | Result |
+|---|------|--------|--------|
+| 34 | FILE | Built `build/valoure-landing/templates/product.valoure-landing.liquid` + README + zip | Zip delivered to owner; committed to branch |
+| 35 | READ | `graphql_schema` ThemeDuplicatePayload / OnlineStoreThemeFilesUpsertFileInput / ThemeFilesUpsertPayload | Confirmed mutation shapes |
+| 36 | WRITE | `graphql_mutation themeDuplicate` (live 205722747229 → new) | Created **"Valoure PDP DRAFT (safe copy)"** `gid://…/205875446109` (UNPUBLISHED). Live theme READ only. |
+| 37 | WRITE | `graphql_mutation themeFilesUpsert` (body type URL → GitHub raw) | Wrote `templates/product.liquid` to draft 205875446109 (no userErrors) |
+| 38 | READ | `graphql_query` theme file verify | ✅ `templates/product.liquid` = 62,502 bytes, content matches |
+
+### PDP preview (NOT published)
+- **Preview URL:** `https://0t3ptn-ca.myshopify.com/products/weighted-sleep-mask?preview_theme_id=205875446109`
+- ⛔ Draft theme will NOT be published without explicit owner approval (review gate).
+- ⚠️ Theme's own header/footer render around the page (theme layout) — offered to slim if owner wants a distraction-free landing look.
+- ⚠️ Still open: update live variant prices 61.11→57.72 / 81.48→71.30 so checkout matches (option b, pending owner).
